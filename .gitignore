@@ -1,0 +1,9 @@
+# 重複打包資料夾（根目錄即為完整 GitHub Pages PWA，無須重複提交）
+pwa_deploy/
+
+# Python / 系統暫存檔
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini

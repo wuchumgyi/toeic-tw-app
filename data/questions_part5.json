@@ -1,0 +1,902 @@
+[
+  {
+    "id": "P5-01",
+    "grammarSlug": "word-form",
+    "grammarCategory": "詞性判別",
+    "sentence": "The operations director praised the logistics team for their _______ handling of the unexpected port delay.",
+    "options": [
+      "efficiency",
+      "efficiently",
+      "efficiencies",
+      "efficient"
+    ],
+    "answer": 3,
+    "translation": "營運總監讚揚物流團隊對於突發港口延誤的高效率處理。",
+    "explanation": "空格位於所有格 their 與動名詞 handling 之間，用來修飾名詞性的 handling，因此需要形容詞 efficient（有效率的）。(A) 與 (C) 為名詞，(B) 為副詞。"
+  },
+  {
+    "id": "P5-02",
+    "grammarSlug": "word-form",
+    "grammarCategory": "詞性判別",
+    "sentence": "Please attach a signed copy of the vendor _______ before uploading the payment request to the portal.",
+    "options": [
+      "agree",
+      "agreement",
+      "agreeable",
+      "agreeably"
+    ],
+    "answer": 1,
+    "translation": "在將付款申請上傳至入口網站前，請附上已簽署的供應商合約副本。",
+    "explanation": "空格位於定冠詞 the 與名詞修飾語 vendor 之後，組成複合名詞「供應商合約」，需要名詞 agreement。(A) 為動詞，(C) 為形容詞，(D) 為副詞。"
+  },
+  {
+    "id": "P5-03",
+    "grammarSlug": "word-form",
+    "grammarCategory": "詞性判別",
+    "sentence": "Upgrading to automated inventory software has _______ reduced the time needed for monthly stock checks.",
+    "options": [
+      "dramatically",
+      "dramatic",
+      "dramatize",
+      "drama"
+    ],
+    "answer": 0,
+    "translation": "升級為自動化庫存軟體大幅縮短了每月盤點所需的時間。",
+    "explanation": "空格位於助動詞 has 與過去分詞 reduced 之間，用來修飾動詞 reduced，必須使用副詞 dramatically（大幅地）。(D) 名詞、(B) 形容詞、(C) 動詞皆不合文法。"
+  },
+  {
+    "id": "P5-04",
+    "grammarSlug": "word-form",
+    "grammarCategory": "詞性判別",
+    "sentence": "To remain _______ in the cloud services market, the company invests heavily in research and development.",
+    "options": [
+      "competitively",
+      "compete",
+      "competition",
+      "competitive"
+    ],
+    "answer": 3,
+    "translation": "為了在雲端服務市場保持競爭力，該公司投入大筆資金於研發。",
+    "explanation": "remain 為連綴動詞（保持…狀態），後方需接形容詞作為主詞補語，故選 competitive（具競爭力的）。(B) 動詞、(C) 名詞、(A) 副詞均誤。"
+  },
+  {
+    "id": "P5-05",
+    "grammarSlug": "word-form",
+    "grammarCategory": "詞性判別",
+    "sentence": "Ms. Lin received a promotion in recognition of her _______ dedication to improving customer retention.",
+    "options": [
+      "exception",
+      "exceptionally",
+      "exceptional",
+      "except"
+    ],
+    "answer": 2,
+    "translation": "林小姐因致力於提升客戶留存率的卓越奉獻精神而獲得升遷。",
+    "explanation": "空格位於所有格 her 與名詞 dedication（奉獻）之間，需填入形容詞 exceptional（傑出的、卓越的）修飾名詞。"
+  },
+  {
+    "id": "P5-06",
+    "grammarSlug": "verb-tense",
+    "grammarCategory": "動詞時態",
+    "sentence": "Online orders for the ergonomic desk chair _______ by 35 percent since the redesign launched in March.",
+    "options": [
+      "have increased",
+      "increase",
+      "increased",
+      "will increase"
+    ],
+    "answer": 0,
+    "translation": "自從這款人體工學辦公椅於三月推出改款以來，網路訂單已成長了 35%。",
+    "explanation": "句尾出現時間線索 since + 過去時間子句（自從三月推出以來），表示動作從過去持續影響到現在，主要子句必須使用現在完成式 have increased。"
+  },
+  {
+    "id": "P5-07",
+    "grammarSlug": "verb-tense",
+    "grammarCategory": "動詞時態",
+    "sentence": "By the time the external auditors arrived at the headquarters, the accounting team _______ all quarterly ledgers.",
+    "options": [
+      "verifies",
+      "will verify",
+      "had verified",
+      "has verified"
+    ],
+    "answer": 2,
+    "translation": "在外部稽核人員抵達總部之前，會計團隊就已經核對完所有季度分類帳了。",
+    "explanation": "By the time + 過去式子句（arrived）表示「在過去某個時間點之前就已經先完成」，因此主要子句應搭配過去完成式 had verified。"
+  },
+  {
+    "id": "P5-08",
+    "grammarSlug": "verb-tense",
+    "grammarCategory": "動詞時態",
+    "sentence": "Once the revised shipping schedule _______ finalized, we will notify all regional distributors immediately.",
+    "options": [
+      "has been being",
+      "will be",
+      "was",
+      "is"
+    ],
+    "answer": 3,
+    "translation": "修訂後的出貨時程一旦定案，我們將立即通知所有區域經銷商。",
+    "explanation": "Once 引導時間副詞子句，依「以現在式代替未來式」的文法原則，副詞子句內不可用 will，故選現在簡單式被動語態 is（finalized）。"
+  },
+  {
+    "id": "P5-09",
+    "grammarSlug": "verb-tense",
+    "grammarCategory": "動詞時態",
+    "sentence": "By the end of next December, Helios Tech _______ its new semiconductor packaging plant in Tainan.",
+    "options": [
+      "completed",
+      "completes",
+      "was completing",
+      "will have completed"
+    ],
+    "answer": 3,
+    "translation": "在明年十二月底前，Helios 科技公司將會完成位於台南的新半導體封裝廠。",
+    "explanation": "By the end of + 未來時間（next December）強調「在未來某截止時間點之前將已完成」，是未來完成式 will have + 過去分詞的經典線索。"
+  },
+  {
+    "id": "P5-10",
+    "grammarSlug": "verb-tense",
+    "grammarCategory": "動詞時態",
+    "sentence": "Our software engineering division _______ a comprehensive security upgrade at the moment.",
+    "options": [
+      "had conducted",
+      "is conducting",
+      "conducts",
+      "conducted"
+    ],
+    "answer": 1,
+    "translation": "我們的軟體工程部門目前正在進行全面的資安升級。",
+    "explanation": "句尾時間副詞片語 at the moment（此刻、目前）明確提示現階段進行中的動作，應選現在進行式 is conducting。"
+  },
+  {
+    "id": "P5-11",
+    "grammarSlug": "agreement-voice",
+    "grammarCategory": "主詞動詞一致與語態",
+    "sentence": "The summary of employee survey responses _______ scheduled to be presented at Monday's board meeting.",
+    "options": [
+      "is",
+      "have been",
+      "are",
+      "were"
+    ],
+    "answer": 0,
+    "translation": "員工問卷回覆摘要預定於週一的董事會上進行簡報。",
+    "explanation": "劃掉介系詞片語 of employee survey responses 後，真正的主詞為單數名詞 The summary，因此搭配單數動詞 is。"
+  },
+  {
+    "id": "P5-12",
+    "grammarSlug": "agreement-voice",
+    "grammarCategory": "主詞動詞一致與語態",
+    "sentence": "An unexpected power outage _______ during the overnight server maintenance window.",
+    "options": [
+      "was occurred",
+      "is occurring to",
+      "has been occurred",
+      "occurred"
+    ],
+    "answer": 3,
+    "translation": "在夜間伺服器維護時段發生了突如其來的停電。",
+    "explanation": "occur（發生）為不及物動詞，絕對沒有被動語態！故 (A) 與 (C) 直接淘汰，依過去語境選主動過去式 occurred。"
+  },
+  {
+    "id": "P5-13",
+    "grammarSlug": "agreement-voice",
+    "grammarCategory": "主詞動詞一致與語態",
+    "sentence": "Neither the regional manager nor the store supervisors _______ informed about the revised holiday hours yet.",
+    "options": [
+      "is",
+      "has been",
+      "was",
+      "have been"
+    ],
+    "answer": 3,
+    "translation": "區域經理與門市主管們目前都還未收到假期營業時間調整的通知。",
+    "explanation": "Neither A nor B 採「就近原則」，動詞單複數取決於最靠近動詞的 B（the store supervisors，複數），且搭配句尾 yet 與被動語意，故選 have been。"
+  },
+  {
+    "id": "P5-14",
+    "grammarSlug": "agreement-voice",
+    "grammarCategory": "主詞動詞一致與語態",
+    "sentence": "All promotional brochures must _______ by the legal department prior to mass printing.",
+    "options": [
+      "approve",
+      "approving",
+      "be approved",
+      "have approved"
+    ],
+    "answer": 2,
+    "translation": "所有宣傳手冊在大量印刷前都必須經由法務部門核准。",
+    "explanation": "主詞 All promotional brochures（宣傳手冊）無法自行核准，加上後面出現 by the legal department，明確需要被動語態，助動詞 must 後接原形 be approved。"
+  },
+  {
+    "id": "P5-15",
+    "grammarSlug": "agreement-voice",
+    "grammarCategory": "主詞動詞一致與語態",
+    "sentence": "Expanding our direct-to-consumer sales channels _______ significant investment in digital advertising.",
+    "options": [
+      "require",
+      "requires",
+      "requiring",
+      "are requiring"
+    ],
+    "answer": 1,
+    "translation": "拓展直接面對消費者的銷售管道需要對數位廣告投入可觀資金。",
+    "explanation": "動名詞片語 Expanding our direct-to-consumer sales channels（一整件事）作為主詞時，一律視為單數，故搭配第三人稱單數動詞 requires。"
+  },
+  {
+    "id": "P5-16",
+    "grammarSlug": "gerund-infinitive",
+    "grammarCategory": "動名詞與不定詞",
+    "sentence": "We look forward to _______ with your design team on the upcoming flagship store renovation.",
+    "options": [
+      "collaborate",
+      "collaborating",
+      "collaborated",
+      "collaboration of"
+    ],
+    "answer": 1,
+    "translation": "我們期待與貴公司的設計團隊合作即將到來的旗艦店翻修案。",
+    "explanation": "look forward to（期待）中的 to 是介系詞而非不定詞標記，後方必須接名詞或動名詞 V-ing，因此選 collaborating。"
+  },
+  {
+    "id": "P5-17",
+    "grammarSlug": "gerund-infinitive",
+    "grammarCategory": "動名詞與不定詞",
+    "sentence": "The executive board decided to postpone _______ the new branch until local permits are secured.",
+    "options": [
+      "opening",
+      "to open",
+      "opened",
+      "open"
+    ],
+    "answer": 0,
+    "translation": "執行董事會決定在取得當地許可證之前，暫緩開設新分店。",
+    "explanation": "postpone（延期、暫緩）屬於後面只能接動名詞（V-ing）的高頻動詞，不可接不定詞 to open，故選 opening。"
+  },
+  {
+    "id": "P5-18",
+    "grammarSlug": "gerund-infinitive",
+    "grammarCategory": "動名詞與不定詞",
+    "sentence": "All new hires are encouraged _______ the onboarding portal within their first week of employment.",
+    "options": [
+      "complete",
+      "to complete",
+      "completing",
+      "completed"
+    ],
+    "answer": 1,
+    "translation": "鼓勵所有新進員工在到職第一週內完成新人報到入口網站的流程。",
+    "explanation": "encourage + 受詞 + to V（鼓勵某人做某事）改為被動語態時為 be encouraged to V，故選 to complete。"
+  },
+  {
+    "id": "P5-19",
+    "grammarSlug": "gerund-infinitive",
+    "grammarCategory": "動名詞與不定詞",
+    "sentence": "The company is deeply committed to _______ carbon emissions across its entire manufacturing supply chain.",
+    "options": [
+      "reduction",
+      "reduce",
+      "reducing",
+      "reduced"
+    ],
+    "answer": 2,
+    "translation": "該公司堅定致力於降低其整個製造供應鏈的碳排放量。",
+    "explanation": "be committed to 中的 to 為介系詞，後接名詞或動名詞；又因為空格後面直接有名詞受詞 carbon emissions，名詞 reduction 無法直接接受詞（需加 of），故必須選動名詞 reducing。"
+  },
+  {
+    "id": "P5-20",
+    "grammarSlug": "gerund-infinitive",
+    "grammarCategory": "動名詞與不定詞",
+    "sentence": "Before leaving the office, Mr. Chen had his assistant _______ the updated itinerary to the visiting clients.",
+    "options": [
+      "email",
+      "to email",
+      "emailed",
+      "emailing"
+    ],
+    "answer": 0,
+    "translation": "在離開辦公室前，陳先生請他的助理將更新後的行程表寄給來訪客戶。",
+    "explanation": "使役動詞 have + 人（his assistant）+ 原形動詞，表示「請某人做某事」，因助理是主動寄信，故選原形動詞 email。"
+  },
+  {
+    "id": "P5-21",
+    "grammarSlug": "participle",
+    "grammarCategory": "分詞與分詞構句",
+    "sentence": "Please sign and return the _______ confidentiality agreement before accessing the client database.",
+    "options": [
+      "enclosed",
+      "enclose",
+      "enclosing",
+      "enclosure"
+    ],
+    "answer": 0,
+    "translation": "在存取客戶資料庫之前，請簽署並寄回隨附的保密協議。",
+    "explanation": "保密協議（confidentiality agreement）是「被附上」的，應使用過去分詞 enclosed 當作形容詞修飾名詞。"
+  },
+  {
+    "id": "P5-22",
+    "grammarSlug": "participle",
+    "grammarCategory": "分詞與分詞構句",
+    "sentence": "_______ with the rapid turnaround time, the corporate client immediately renewed its annual service contract.",
+    "options": [
+      "Please",
+      "Pleasing",
+      "Pleasure",
+      "Pleased"
+    ],
+    "answer": 3,
+    "translation": "由於對快速的交件時間感到滿意，該企業客戶隨即續簽了年度服務合約。",
+    "explanation": "句首為分詞構句，逗號後的主詞為 the corporate client（人／客戶），表示「感到滿意的」應用過去分詞 Pleased（原句為 Because the client was pleased...）。"
+  },
+  {
+    "id": "P5-23",
+    "grammarSlug": "participle",
+    "grammarCategory": "分詞與分詞構句",
+    "sentence": "Applicants _______ at least three years of project management experience will be given priority.",
+    "options": [
+      "possess",
+      "possessed",
+      "possession",
+      "possessing"
+    ],
+    "answer": 3,
+    "translation": "具備至少三年專案管理經驗的應徵者將獲得優先考量。",
+    "explanation": "整句已有主要動詞 will be given，此處需用分詞片語後位修飾 Applicants（= Applicants who possess...）。應徵者是主動「具備」經驗，故選現在分詞 possessing。"
+  },
+  {
+    "id": "P5-24",
+    "grammarSlug": "participle",
+    "grammarCategory": "分詞與分詞構句",
+    "sentence": "The quarterly earnings report was surprisingly _______ given the recent slowdown in global retail demand.",
+    "options": [
+      "encouraging",
+      "encourage",
+      "encouraged",
+      "encouragement"
+    ],
+    "answer": 0,
+    "translation": "考量到近期全球零售需求放緩，這份季度財報結果出乎意料地令人振奮。",
+    "explanation": "主詞為 The quarterly earnings report（事物），表示「令人振奮的、鼓舞人心的」，情緒動詞應使用現在分詞 encouraging。"
+  },
+  {
+    "id": "P5-25",
+    "grammarSlug": "participle",
+    "grammarCategory": "分詞與分詞構句",
+    "sentence": "_______ in 1998 as a small family workshop, Apex Hardware now exports precision tools to forty countries.",
+    "options": [
+      "Founding",
+      "To found",
+      "Having found",
+      "Founded"
+    ],
+    "answer": 3,
+    "translation": "創立於 1998 年、起初只是小型家庭工廠的 Apex 五金，如今將精密工具外銷至四十個國家。",
+    "explanation": "主句主詞 Apex Hardware 是「被創立」的（was founded in 1998），分詞構句應選被動過去分詞 Founded。"
+  },
+  {
+    "id": "P5-26",
+    "grammarSlug": "relative-clause",
+    "grammarCategory": "關係子句與名詞子句",
+    "sentence": "The architectural firm _______ proposal won first prize will oversee the cultural center project.",
+    "options": [
+      "who",
+      "which",
+      "whose",
+      "what"
+    ],
+    "answer": 2,
+    "translation": "提案獲得首獎的建築事務所將負責督導這項文化中心專案。",
+    "explanation": "先行詞為 The architectural firm，空格後方緊接無冠詞名詞 proposal，語意為「其提案（the firm's proposal）」，所有格關係代名詞必選 whose。"
+  },
+  {
+    "id": "P5-27",
+    "grammarSlug": "relative-clause",
+    "grammarCategory": "關係子句與名詞子句",
+    "sentence": "The Taichung distribution hub, _______ opened two years ago, handles over 10,000 parcels daily.",
+    "options": [
+      "that",
+      "where",
+      "which",
+      "what"
+    ],
+    "answer": 2,
+    "translation": "兩年前啟用的台中物流中心每天處理超過一萬件包裹。",
+    "explanation": "逗號後方為非限定關係子句，絕對不可使用 that！又因為子句 opened two years ago 缺少主詞（不完整），不能用關係副詞 where，故選 which。"
+  },
+  {
+    "id": "P5-28",
+    "grammarSlug": "relative-clause",
+    "grammarCategory": "關係子句與名詞子句",
+    "sentence": "This is the conference hall _______ the annual semiconductor summit will be held next month.",
+    "options": [
+      "what",
+      "which",
+      "who",
+      "where"
+    ],
+    "answer": 3,
+    "translation": "這就是下個月將舉辦年度半導體高峰會的會議廳。",
+    "explanation": "先行詞 the conference hall 為地點，後方子句 the annual semiconductor summit will be held next month 主詞與被動動詞完整不缺受詞，因此選關係副詞 where（= in which）。"
+  },
+  {
+    "id": "P5-29",
+    "grammarSlug": "relative-clause",
+    "grammarCategory": "關係子句與名詞子句",
+    "sentence": "_______ impressed the investors most was the team's clear roadmap for international expansion.",
+    "options": [
+      "Which",
+      "Who",
+      "What",
+      "That"
+    ],
+    "answer": 2,
+    "translation": "最讓投資人印象深刻的是團隊清晰的國際擴張藍圖。",
+    "explanation": "空格前無先行詞，後方子句 impressed the investors most 缺少主詞，故需要複合關係代名詞 What（= The thing that），引導名詞子句作為全句主詞。"
+  },
+  {
+    "id": "P5-30",
+    "grammarSlug": "relative-clause",
+    "grammarCategory": "關係子句與名詞子句",
+    "sentence": "Please inform the catering coordinator by Tuesday _______ any guests have specific dietary restrictions.",
+    "options": [
+      "whether",
+      "which",
+      "that of",
+      "what"
+    ],
+    "answer": 0,
+    "translation": "請在週二前告知外燴協調人員，是否有任何賓客有特殊的飲食限制。",
+    "explanation": "後方子句 any guests have specific dietary restrictions 結構完整，語意表達「是否…」，應選名詞子句連接詞 whether。"
+  },
+  {
+    "id": "P5-31",
+    "grammarSlug": "conjunction-prep",
+    "grammarCategory": "連接詞與轉折詞",
+    "sentence": "_______ the brief network outage this morning, all customer transactions were processed without data loss.",
+    "options": [
+      "Although",
+      "Despite",
+      "However",
+      "Whereas"
+    ],
+    "answer": 1,
+    "translation": "儘管今早發生短暫網路中斷，所有客戶交易都在未遺失資料的情況下完成處理。",
+    "explanation": "空格後方為名詞片語 the brief network outage this morning（沒有動詞），需要表達「儘管」的介系詞 Despite。(A) 與 (D) 為連接詞，(C) 為副詞。"
+  },
+  {
+    "id": "P5-32",
+    "grammarSlug": "conjunction-prep",
+    "grammarCategory": "連接詞與轉折詞",
+    "sentence": "The outdoor ribbon-cutting ceremony was moved indoors _______ heavy rain forecast for the afternoon.",
+    "options": [
+      "because",
+      "due to",
+      "since",
+      "unless"
+    ],
+    "answer": 1,
+    "translation": "由於預報下午有豪雨，戶外剪綵典禮改至室內舉行。",
+    "explanation": "空格後方的 heavy rain forecast for the afternoon 是名詞片語（forecast 在此為過去分詞修飾 rain），需用表示原因的介系詞片語 due to。(A) 與 (C) 為連接詞，須接完整子句。"
+  },
+  {
+    "id": "P5-33",
+    "grammarSlug": "conjunction-prep",
+    "grammarCategory": "連接詞與轉折詞",
+    "sentence": "Raw material prices climbed sharply in Q2; _______, our profit margins stayed healthy thanks to automation.",
+    "options": [
+      "although",
+      "even though",
+      "nevertheless",
+      "despite"
+    ],
+    "answer": 2,
+    "translation": "第二季原物料價格大幅攀升；然而，拜自動化所賜，我們的利潤率依然維持穩健。",
+    "explanation": "空格前有分號 (;)、後有逗號 (,)，必須使用轉折副詞 nevertheless（然而、儘管如此）。連接詞 (A)(B) 與介系詞 (D) 皆不符合此標點文法。"
+  },
+  {
+    "id": "P5-34",
+    "grammarSlug": "conjunction-prep",
+    "grammarCategory": "連接詞與轉折詞",
+    "sentence": "Visitors are asked to silence their mobile phones _______ the keynote presentation is in progress.",
+    "options": [
+      "for",
+      "during",
+      "throughout",
+      "while"
+    ],
+    "answer": 3,
+    "translation": "在主題演講進行期間，請訪客將手機調為靜音。",
+    "explanation": "空格後方為完整子句 the keynote presentation is in progress（主詞＋動詞），因此必須選擇連接詞 while。(B)、(C)、(A) 均為介系詞，只能接名詞。"
+  },
+  {
+    "id": "P5-35",
+    "grammarSlug": "conjunction-prep",
+    "grammarCategory": "連接詞與轉折詞",
+    "sentence": "We will grant a full refund _______ the merchandise is returned unopened within fourteen days of purchase.",
+    "options": [
+      "provided that",
+      "in case of",
+      "except for",
+      "owing to"
+    ],
+    "answer": 0,
+    "translation": "只要商品在購買後十四天內未開封退回，我們將給予全額退款。",
+    "explanation": "空格後方為完整子句 the merchandise is returned...，且語意為「只要、假如」，故選條件連接詞 provided that（= if）。其餘選項均為介系詞片語。"
+  },
+  {
+    "id": "P5-36",
+    "grammarSlug": "preposition",
+    "grammarCategory": "高頻介系詞",
+    "sentence": "All grant applications must be received by our committee _______ 5:00 P.M. on October 31.",
+    "options": [
+      "until",
+      "by",
+      "during",
+      "since"
+    ],
+    "answer": 1,
+    "translation": "所有補助款申請必須於十月三十一日下午五點前送達本委員會。",
+    "explanation": "收到申請（be received）為一次性的期限動作，表示「在截止時間之前」必須用 by；until 則用於持續性狀態或動作。"
+  },
+  {
+    "id": "P5-37",
+    "grammarSlug": "preposition",
+    "grammarCategory": "高頻介系詞",
+    "sentence": "The main exhibition hall will remain open _______ 8:00 P.M. this Saturday to accommodate evening visitors.",
+    "options": [
+      "by",
+      "until",
+      "within",
+      "at"
+    ],
+    "answer": 1,
+    "translation": "主展覽館本週六將持續開放至晚間八點，以服務夜間參觀民眾。",
+    "explanation": "remain open（持續開放）為延續性狀態，搭配「直到某時間點為止」應選 until。"
+  },
+  {
+    "id": "P5-38",
+    "grammarSlug": "preposition",
+    "grammarCategory": "高頻介系詞",
+    "sentence": "Every pharmaceutical facility must strictly comply _______ the updated quality assurance regulations.",
+    "options": [
+      "to",
+      "with",
+      "for",
+      "at"
+    ],
+    "answer": 1,
+    "translation": "每一座製藥廠都必須嚴格遵守更新後的品質保證法規。",
+    "explanation": "多益商務必背固定搭配：comply with（遵守…規定／法規），等同於 adhere to 或 conform to。"
+  },
+  {
+    "id": "P5-39",
+    "grammarSlug": "preposition",
+    "grammarCategory": "高頻介系詞",
+    "sentence": "Employees who have completed one year of full-time service are eligible _______ tuition reimbursement.",
+    "options": [
+      "for",
+      "about",
+      "with",
+      "of"
+    ],
+    "answer": 0,
+    "translation": "完成一年正職年資的員工即符合學費補助核銷資格。",
+    "explanation": "多益人資與福利主題必背搭配：be eligible for + 名詞（符合…資格）；若是接動詞則為 be eligible to V。"
+  },
+  {
+    "id": "P5-40",
+    "grammarSlug": "preposition",
+    "grammarCategory": "高頻介系詞",
+    "sentence": "All flight schedules listed in the brochure are subject _______ change depending on seasonal demand.",
+    "options": [
+      "for",
+      "with",
+      "under",
+      "to"
+    ],
+    "answer": 3,
+    "translation": "簡介手冊中所列的所有班機時刻表皆可能視季節需求而調整。",
+    "explanation": "商務公告高頻片語：be subject to + 名詞（視…而定、可能受…變動／規範），如 subject to change（可能會變動）、subject to approval（須經核准）。"
+  },
+  {
+    "id": "P5-41",
+    "grammarSlug": "pronoun",
+    "grammarCategory": "代名詞與限定詞",
+    "sentence": "Despite having a small staff, the boutique agency designed the entire promotional campaign by _______.",
+    "options": [
+      "itself",
+      "it",
+      "its",
+      "themselves"
+    ],
+    "answer": 0,
+    "translation": "儘管人手精簡，這家精品代理商仍獨自設計了整檔宣傳行銷活動。",
+    "explanation": "主詞 the boutique agency 為單數機構，片語 by oneself 表「獨自地」，故選單數反身代名詞 itself。"
+  },
+  {
+    "id": "P5-42",
+    "grammarSlug": "pronoun",
+    "grammarCategory": "代名詞與限定詞",
+    "sentence": "_______ who wish to reserve a booth at the autumn trade expo should register on our website before August 15.",
+    "options": [
+      "They",
+      "Anyone",
+      "Them",
+      "Those"
+    ],
+    "answer": 3,
+    "translation": "凡是希望在秋季貿易展預訂攤位者，請於八月十五日前至本公司網站報名。",
+    "explanation": "關係子句動詞 wish 為複數原形，表示「凡是…的人」在英文正式公告中一律使用 Those who + 複數動詞。(B) Anyone 須配單數動詞 wishes。"
+  },
+  {
+    "id": "P5-43",
+    "grammarSlug": "pronoun",
+    "grammarCategory": "代名詞與限定詞",
+    "sentence": "The durability of our new lithium battery exceeds _______ of competing products in the same price range.",
+    "options": [
+      "that",
+      "it",
+      "those",
+      "one"
+    ],
+    "answer": 0,
+    "translation": "我們新款鋰電池的耐用度超越同價位帶競爭產品的耐用度。",
+    "explanation": "比較句中為了避免重複前面的單數／不可數名詞（the durability），必須使用代名詞 that 代替；若代替複數名詞則用 those。"
+  },
+  {
+    "id": "P5-44",
+    "grammarSlug": "pronoun",
+    "grammarCategory": "代名詞與限定詞",
+    "sentence": "After reviewing both design drafts, the client preferred our layout over _______.",
+    "options": [
+      "theirs",
+      "they",
+      "their",
+      "themselves"
+    ],
+    "answer": 0,
+    "translation": "審閱完兩份設計草圖後，客戶比起對方的排版更喜歡我們的版本。",
+    "explanation": "空格後方沒有名詞，且需要對應前面的 our layout，因此選所有格代名詞 theirs（= their layout）。"
+  },
+  {
+    "id": "P5-45",
+    "grammarSlug": "pronoun",
+    "grammarCategory": "代名詞與限定詞",
+    "sentence": "During orientation, new technicians must familiarize _______ with the laboratory's emergency protocols.",
+    "options": [
+      "their",
+      "they",
+      "themselves",
+      "them"
+    ],
+    "answer": 2,
+    "translation": "在新人訓練期間，新進技師必須讓自己熟悉實驗室的緊急應變程序。",
+    "explanation": "固定商務用法：familiarize oneself with...（讓自己熟悉…），因主詞為複數 new technicians，故選反身代名詞 themselves。"
+  },
+  {
+    "id": "P5-46",
+    "grammarSlug": "quantifier",
+    "grammarCategory": "數量詞與名詞可數性",
+    "sentence": "_______ all employees in the Hsinchu office participated in the annual fire safety drill.",
+    "options": [
+      "Mostly",
+      "More",
+      "Almost",
+      "Most"
+    ],
+    "answer": 2,
+    "translation": "新竹辦公室幾乎所有員工都參加了年度消防安全演練。",
+    "explanation": "多益超級經典考點！空格後面已有不定代名詞 all，需要副詞 Almost（幾乎）來修飾 all（Almost all + 名詞）。Most 不能放在 all 前面。"
+  },
+  {
+    "id": "P5-47",
+    "grammarSlug": "quantifier",
+    "grammarCategory": "數量詞與名詞可數性",
+    "sentence": "Because we had very _______ time before the press briefing, we focused only on the key financial highlights.",
+    "options": [
+      "few",
+      "many",
+      "little",
+      "several"
+    ],
+    "answer": 2,
+    "translation": "由於距離媒體簡報會剩下的時間非常少，我們只聚焦在核心財務亮點上。",
+    "explanation": "time（時間）為不可數名詞，表示「幾乎沒有／很少」應選 little。(A)、(B)、(D) 均只能修飾可數複數名詞。"
+  },
+  {
+    "id": "P5-48",
+    "grammarSlug": "quantifier",
+    "grammarCategory": "數量詞與名詞可數性",
+    "sentence": "The hospital recently invested a substantial amount of funding in state-of-the-art diagnostic _______.",
+    "options": [
+      "equipments",
+      "an equipment",
+      "equipment",
+      "equipped"
+    ],
+    "answer": 2,
+    "translation": "該醫院近期投入大筆資金採購最先進的診斷設備。",
+    "explanation": "equipment（設備）是多益必考「不可數名詞」，絕不可加 s，也不可搭配不定冠詞 an，故選 equipment。"
+  },
+  {
+    "id": "P5-49",
+    "grammarSlug": "quantifier",
+    "grammarCategory": "數量詞與名詞可數性",
+    "sentence": "_______ of the conference delegates received a printed itinerary and a wireless translation headset at check-in.",
+    "options": [
+      "Every",
+      "Each",
+      "Either of",
+      "Both"
+    ],
+    "answer": 1,
+    "translation": "每位研討會代表在報到時都領到一份紙本行程表與一副無線口譯耳機。",
+    "explanation": "Every 不能直接加 of（需寫 Every one of）；Either of 多了重複的 of；Both 只指兩者。只有 Each 可直接構成 Each of the + 複數名詞。"
+  },
+  {
+    "id": "P5-50",
+    "grammarSlug": "quantifier",
+    "grammarCategory": "數量詞與名詞可數性",
+    "sentence": "A growing _______ of overseas startups are setting up research hubs in Taiwan.",
+    "options": [
+      "amount",
+      "deal",
+      "number",
+      "quantity"
+    ],
+    "answer": 2,
+    "translation": "越來越多的海外新創公司正在台灣設立研發據點。",
+    "explanation": "startups（新創公司）為可數複數名詞，且後面動詞為複數 are，應搭配 A (growing) number of（越來越多的…）。amount 與 deal 用於不可數名詞。"
+  },
+  {
+    "id": "P5-51",
+    "grammarSlug": "comparison",
+    "grammarCategory": "比較級與最高級",
+    "sentence": "The upgraded fiber-optic connection transfers large CAD files _______ faster than our previous network.",
+    "options": [
+      "quite",
+      "far",
+      "very",
+      "too"
+    ],
+    "answer": 1,
+    "translation": "升級後的光纖連線傳輸大型 CAD 檔案的速度比舊網路快上許多。",
+    "explanation": "修飾比較級（faster）不可使用 very、too 或 quite，必須使用 much / far / even / significantly 等強調副詞，故選 far。"
+  },
+  {
+    "id": "P5-52",
+    "grammarSlug": "comparison",
+    "grammarCategory": "比較級與最高級",
+    "sentence": "Pacific Freight is widely regarded as one of the most dependable logistics _______ in East Asia.",
+    "options": [
+      "provision",
+      "provider",
+      "providers",
+      "providing"
+    ],
+    "answer": 2,
+    "translation": "太平洋貨運被公認為東亞地區最可靠的物流供應商之一。",
+    "explanation": "固定最高級句型：one of the + 最高級 + 複數名詞（最…之一），因此必須選複數名詞 providers。"
+  },
+  {
+    "id": "P5-53",
+    "grammarSlug": "comparison",
+    "grammarCategory": "比較級與最高級",
+    "sentence": "The new acoustic insulation performs almost as _______ as the premium imported brand at half the cost.",
+    "options": [
+      "effective",
+      "more effective",
+      "effectiveness",
+      "effectively"
+    ],
+    "answer": 3,
+    "translation": "新款隔音材的表現幾乎與頂級進口品牌一樣有效，但成本只要一半。",
+    "explanation": "as...as 中間必須放原級，且此處修飾一般動詞 performs（表現），故選副詞原級 effectively。"
+  },
+  {
+    "id": "P5-54",
+    "grammarSlug": "comparison",
+    "grammarCategory": "比較級與最高級",
+    "sentence": "The _______ you submit your travel reimbursement receipts, the sooner accounting can process your payment.",
+    "options": [
+      "earlier",
+      "early",
+      "earliest",
+      "more early"
+    ],
+    "answer": 0,
+    "translation": "你越早提交差旅報帳收據，會計部門就能越快處理你的撥款。",
+    "explanation": "「越…就越…」雙重比較級句型：The + 比較級..., the + 比較級...。early 的比較級為 earlier。"
+  },
+  {
+    "id": "P5-55",
+    "grammarSlug": "comparison",
+    "grammarCategory": "比較級與最高級",
+    "sentence": "Our titanium alloy casing is far superior _______ standard aluminum in both heat dissipation and durability.",
+    "options": [
+      "to",
+      "than",
+      "from",
+      "over"
+    ],
+    "answer": 0,
+    "translation": "我們的鈦合金外殼在散熱與耐用性方面都遠勝於標準鋁材。",
+    "explanation": "superior（優於）、inferior（劣於）、prior（先於）等拉丁字源比較形容詞，後方一律配介系詞 to，不可用 than。"
+  },
+  {
+    "id": "P5-56",
+    "grammarSlug": "subjunctive-inversion",
+    "grammarCategory": "假設語氣與倒裝句",
+    "sentence": "_______ any subscriber experience technical difficulties during installation, please contact our 24-hour support line.",
+    "options": [
+      "Had",
+      "If",
+      "Should",
+      "Were"
+    ],
+    "answer": 2,
+    "translation": "若任何訂閱戶在安裝過程中遇到技術問題，請聯絡我們的 24 小時支援專線。",
+    "explanation": "原句為 If any subscriber should experience...，省略 If 並將 Should 移至句首形成條件倒裝，後方接原形動詞 experience。若選 (B) If，單數主詞 any subscriber 後方動詞必須加 s（experiences），因此唯一正解為 (C) Should。"
+  },
+  {
+    "id": "P5-57",
+    "grammarSlug": "subjunctive-inversion",
+    "grammarCategory": "假設語氣與倒裝句",
+    "sentence": "The compliance officer strongly recommended that every branch _______ its client records quarterly.",
+    "options": [
+      "auditing",
+      "audit",
+      "audits",
+      "audited"
+    ],
+    "answer": 1,
+    "translation": "法遵主管強烈建議各分公司每季稽核一次客戶紀錄。",
+    "explanation": "建議／要求動詞（recommend / suggest / require / insist）後接 that 子句時，子句內省略 should，動詞一律用原形（不受單數主詞 every branch 或過去式 recommended 影響），故選 audit。"
+  },
+  {
+    "id": "P5-58",
+    "grammarSlug": "subjunctive-inversion",
+    "grammarCategory": "假設語氣與倒裝句",
+    "sentence": "_______ the supplier notified us of the component shortage earlier, we would have adjusted our delivery timeline.",
+    "options": [
+      "Have",
+      "Were",
+      "Should",
+      "Had"
+    ],
+    "answer": 3,
+    "translation": "要是供應商當初能提早通知我們零件短缺，我們就會調整交貨時程了。",
+    "explanation": "主要子句為 would have + p.p.，表示「與過去事實相反的假設」。原句為 If the supplier had notified us...，省略 If 並將 Had 移至句首形成倒裝。"
+  },
+  {
+    "id": "P5-59",
+    "grammarSlug": "subjunctive-inversion",
+    "grammarCategory": "假設語氣與倒裝句",
+    "sentence": "It is imperative that all safety inspectors _______ protective helmets while entering the construction zone.",
+    "options": [
+      "wears",
+      "wear",
+      "wearing",
+      "wore"
+    ],
+    "answer": 1,
+    "translation": "所有安全檢查員在進入施工區域時務必配戴安全帽。",
+    "explanation": "It is imperative / essential / vital that + S + (should) + 原形動詞，表達必要性假設語氣，故選原形 wear。"
+  },
+  {
+    "id": "P5-60",
+    "grammarSlug": "subjunctive-inversion",
+    "grammarCategory": "假設語氣與倒裝句",
+    "sentence": "Not only _______ the marketing campaign boost brand awareness, but it also doubled online subscriptions.",
+    "options": [
+      "was",
+      "did",
+      "has",
+      "does"
+    ],
+    "answer": 1,
+    "translation": "這檔行銷活動不僅提升了品牌知名度，還讓線上訂閱人數翻倍。",
+    "explanation": "否定片語 Not only 置於句首時，第一個子句必須倒裝（助動詞 + 主詞 + 原形動詞）。依後半句過去式 doubled 與原形動詞 boost 判斷，選過去式助動詞 did。"
+  }
+]

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1e3a5f" id="themeColorMeta" />
+  <meta name="description" content="台灣考生專屬新制多益（TOEIC）離線互動教材 App：615 核心主題單字、1,656 鍵盤打字背單字、12 大必考文法與 100 題閱讀計時模擬考。" />
+
+  <!-- PWA & iOS 主畫面全螢幕設定 -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/icon.svg" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="多益教材" />
+
+  <title>多益互動教材・台灣繁體離線版</title>
+  <link rel="stylesheet" href="./assets/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-badge">TOEIC TW</span>
+        <div>
+          <div class="brand-title">新制多益互動教材</div>
+          <div class="brand-sub">台灣繁體精校版 <span id="offlineBadge" class="offline-badge"></span></div>
+        </div>
+      </div>
+
+      <div class="controls-bar">
+        <button id="pwaInstallBtn" class="icon-btn install-btn" type="button" style="display:none;">安裝 App</button>
+        <select id="accentSelect" class="control-select" title="選擇考場朗讀口音" aria-label="選擇口音">
+          <option value="en-US">美音 US</option>
+          <option value="en-GB">英音 UK</option>
+          <option value="en-AU">澳音 AU</option>
+        </select>
+        <select id="rateSelect" class="control-select" title="選擇語音朗讀速度" aria-label="選擇語速">
+          <option value="0.85">0.85x</option>
+          <option value="1" selected>1.0x</option>
+          <option value="1.15">1.15x</option>
+        </select>
+        <button id="fontToggleBtn" class="icon-btn" type="button" title="切換字體大小">A+</button>
+        <button id="themeToggleBtn" class="icon-btn" type="button" title="切換深淺色護眼主題">深色</button>
+      </div>
+    </div>
+
+    <!-- 桌機頂部分頁列 -->
+    <nav class="nav-tabs" id="navTabs" aria-label="主要學習分頁">
+      <button class="nav-tab active" data-view="dashboard">總覽儀表板</button>
+      <button class="nav-tab" data-view="core600">600 核心主題單字</button>
+      <button class="nav-tab" data-view="typing">鍵盤打字背單字</button>
+      <button class="nav-tab" data-view="grammar">12 大必考文法</button>
+      <button class="nav-tab" data-view="practice">閱讀實戰刷題</button>
+      <button class="nav-tab" data-view="mock">計時模擬測驗</button>
+    </nav>
+  </header>
+
+  <!-- iOS Safari 加入主畫面引導條 -->
+  <div id="iosInstallBanner" class="ios-install-banner" style="display:none;">
+    <div class="ios-install-inner">
+      <span><strong>加入 iPhone 主畫面：</strong>點選 Safari 底部「分享」按鈕，選擇「<strong>加入主畫面</strong>」，即可全螢幕離線當 App 使用！</span>
+      <button id="closeIosBanner" class="btn btn-sm" type="button">知道了</button>
+    </div>
+  </div>
+
+  <main class="container">
+    <section id="view-dashboard" class="view active"></section>
+    <section id="view-core600" class="view"></section>
+    <section id="view-typing" class="view"></section>
+    <section id="view-grammar" class="view"></section>
+    <section id="view-practice" class="view"></section>
+    <section id="view-mock" class="view"></section>
+  </main>
+
+  <footer class="footer-note">
+    本離線教材資料整合自開源專案 RealKai42/qwerty-learner (GPL-3.0) 與 tranngocminhhieu/toeic-600-words-dataset，並全新原創台灣繁體中文 12 大文法與 100 題閱讀題庫。TOEIC® 為 ETS 註冊商標，本教材為獨立學習用途，與 ETS 無關。
+  </footer>
+
+  <!-- 手機專屬底部固定導覽列（<= 768px 自動顯示） -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="手機底部導覽列">
+    <button class="mb-tab active" data-view="dashboard" type="button">
+      <span class="mb-ico" aria-hidden="true">◉</span>
+      <span class="mb-lbl">總覽</span>
+    </button>
+    <button class="mb-tab" data-view="core600" type="button">
+      <span class="mb-ico" aria-hidden="true">▤</span>
+      <span class="mb-lbl">核心字</span>
+    </button>
+    <button class="mb-tab" data-view="typing" type="button">
+      <span class="mb-ico" aria-hidden="true">⌨</span>
+      <span class="mb-lbl">打字</span>
+    </button>
+    <button class="mb-tab" data-view="grammar" type="button">
+      <span class="mb-ico" aria-hidden="true">§</span>
+      <span class="mb-lbl">文法</span>
+    </button>
+    <button class="mb-tab" data-view="practice" type="button">
+      <span class="mb-ico" aria-hidden="true">✓</span>
+      <span class="mb-lbl">刷題</span>
+    </button>
+    <button class="mb-tab" data-view="mock" type="button">
+      <span class="mb-ico" aria-hidden="true">⏱</span>
+      <span class="mb-lbl">模考</span>
+    </button>
+  </nav>
+
+  <input type="file" id="importFileInput" accept="application/json" style="display:none" />
+
+  <script src="./assets/toeic_bundle.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

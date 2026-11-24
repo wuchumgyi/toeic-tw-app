@@ -1,0 +1,656 @@
+{
+  "part6": [
+    {
+      "passageId": "P6-SET-1",
+      "docType": "內部公告（Internal Memo）",
+      "title": "辦公室門禁系統升級通知",
+      "header": "TO: All Taipei Headquarters Staff\nFROM: Facilities Management Department\nDATE: May 12\nSUBJECT: Security Badge Upgrade",
+      "body": "Starting Monday, May 19, our building will transition to a new contactless access control system designed to enhance workplace security. All full-time and contract employees must visit the Security Desk on the first floor before May 16 to have their new smart badges [1].\n\nPlease bring your current employee ID card when picking up your replacement badge. [2] Without an updated badge, staff members will need to sign in at the reception lobby each morning.\n\n[3] the system upgrade is completed, the old magnetic cards will be deactivated automatically. If your department has new interns joining after May 19, managers should submit an access request form through the HR portal at least three business days in [4].",
+      "questions": [
+        {
+          "id": "P6-01",
+          "blank": 1,
+          "grammarSlug": "gerund-infinitive",
+          "grammarCategory": "使役動詞與被動",
+          "options": [
+            "issuance",
+            "issue",
+            "issued",
+            "issuing"
+          ],
+          "answer": 2,
+          "explanation": "使役動詞 have + 事物（their new smart badges）+ 過去分詞（p.p.），表示「讓新智慧識別證被核發」，故選過去分詞 issued。"
+        },
+        {
+          "id": "P6-02",
+          "blank": 2,
+          "grammarSlug": "conjunction-prep",
+          "grammarCategory": "句子插入題",
+          "options": [
+            "The cafeteria menu will also feature seasonal items next week.",
+            "The entire registration process takes less than five minutes.",
+            "Parking fees have been waived for overnight visitors.",
+            "We regret to announce the cancellation of the annual picnic."
+          ],
+          "answer": 1,
+          "explanation": "新制 Part 6 必考句子插入題！前句提醒領取新卡時攜帶舊員工證，後句提醒沒換卡的後果，中間銜接「整個換證流程只需不到五分鐘（The entire registration process takes less than five minutes.）」語意最連貫自然。"
+        },
+        {
+          "id": "P6-03",
+          "blank": 3,
+          "grammarSlug": "verb-tense",
+          "grammarCategory": "連接詞與時間子句",
+          "options": [
+            "During",
+            "Despite",
+            "Once",
+            "Until of"
+          ],
+          "answer": 2,
+          "explanation": "後方為完整子句 the system upgrade is completed，需使用時間連接詞 Once（一旦…），表示「一旦系統升級完成，舊磁卡將自動停用」。During 與 Despite 為介系詞。"
+        },
+        {
+          "id": "P6-04",
+          "blank": 4,
+          "grammarSlug": "preposition",
+          "grammarCategory": "商務固定片語",
+          "options": [
+            "detail",
+            "advance",
+            "charge",
+            "progress"
+          ],
+          "answer": 1,
+          "explanation": "多益商務必考片語：in advance（提前、事先），at least three business days in advance 表示「至少提前三個工作天」。"
+        }
+      ]
+    },
+    {
+      "passageId": "P6-SET-2",
+      "docType": "客服回覆信（Customer Service Email）",
+      "title": "訂單延誤致歉與退款說明",
+      "header": "TO: kevin.wu@brightmail.tw\nFROM: support@nordichome.com\nSUBJECT: Update on Your Order #NH-84920",
+      "body": "Dear Mr. Wu,\n\nThank you for contacting Nordic Home Customer Care regarding your recent purchase of the Oslo Standing Desk. We sincerely apologize for the delay in shipping your order. Due to an unexpectedly high volume of holiday orders, our regional warehouse experienced a brief backlog [5] the past week.\n\nWe are pleased to inform you that your package was handed over to the courier this morning and is scheduled to arrive by Thursday, November 14. [6]\n\nAs a token of our appreciation for your patience, we have [7] the NT$450 express delivery fee to your original payment method. You should see the credit appear on your monthly statement [8] five business days.\n\nWarm regards,\nHannah Lin\nCustomer Experience Specialist",
+      "questions": [
+        {
+          "id": "P6-05",
+          "blank": 5,
+          "grammarSlug": "preposition",
+          "grammarCategory": "時間介系詞",
+          "options": [
+            "until",
+            "over",
+            "by",
+            "between"
+          ],
+          "answer": 1,
+          "explanation": "over the past week（在過去一週期間）是多益常見的時間片語，表示在過去一段時間內發生的積壓狀況。"
+        },
+        {
+          "id": "P6-06",
+          "blank": 6,
+          "grammarSlug": "conjunction-prep",
+          "grammarCategory": "句子插入題",
+          "options": [
+            "You can monitor its delivery status anytime using the tracking number below.",
+            "Our furniture showroom is currently closed for winter inventory.",
+            "Please let us know if you would like to apply for a sales position.",
+            "The assembly instructions were accidentally omitted from last year's catalog."
+          ],
+          "answer": 0,
+          "explanation": "前句剛說明包裹已交由快遞寄出並預計週四抵達，緊接著補充「您可以隨時使用下方的物流追蹤編號查詢配送進度」，最符合客服物流通知的上下文邏輯。"
+        },
+        {
+          "id": "P6-07",
+          "blank": 7,
+          "grammarSlug": "word-form",
+          "grammarCategory": "商務核心字彙",
+          "options": [
+            "refunded",
+            "renewed",
+            "incurred",
+            "charged"
+          ],
+          "answer": 0,
+          "explanation": "依前後文「為感謝您的耐心，我們已將 450 元急件運費『退還』至您的原付款方式」，且下句提到 credit appear on your statement（入帳／退款顯示於帳單），故選 refunded（退款）。"
+        },
+        {
+          "id": "P6-08",
+          "blank": 8,
+          "grammarSlug": "preposition",
+          "grammarCategory": "時間介系詞",
+          "options": [
+            "across",
+            "along",
+            "within",
+            "among"
+          ],
+          "answer": 2,
+          "explanation": "within five business days（五個工作天內）是客服、金融與退款書信中出現率極高的時間介系詞片語。"
+        }
+      ]
+    },
+    {
+      "passageId": "P6-SET-3",
+      "docType": "新聞稿（Press Release）",
+      "title": "綠能科技推出新一代太陽能儲能系統",
+      "header": "FOR IMMEDIATE RELEASE\nSunPeak Energy Unveils Compact Commercial Storage Unit",
+      "body": "TAIPEI — SunPeak Energy announced today the commercial launch of its VoltBox Pro, a high-capacity battery system designed specifically for mid-sized factories and retail chains. Measuring 30 percent smaller than [9] models, the unit fits easily into existing utility rooms without costly structural modifications.\n\nAccording to Chief Engineer Dr. David Hsu, the VoltBox Pro uses advanced thermal regulation to extend battery lifespan by up to five years. [10] Consequently, commercial clients can lower their peak-hour electricity expenses while maintaining reliable backup power during grid outages.\n\nInitial installations are already underway at twelve industrial parks across Taiwan. [11], the company plans to enter the Japanese and Australian markets in the third quarter. Businesses interested in scheduling an on-site energy [12] may register on SunPeak's official website.",
+      "questions": [
+        {
+          "id": "P6-09",
+          "blank": 9,
+          "grammarSlug": "word-form",
+          "grammarCategory": "商務形容詞字彙",
+          "options": [
+            "compare",
+            "comparable",
+            "comparably",
+            "comparison"
+          ],
+          "answer": 1,
+          "explanation": "空格位於名詞 models 前方，需要形容詞修飾名詞，comparable models 意為「同等級的／可相比擬的機型」。"
+        },
+        {
+          "id": "P6-10",
+          "blank": 10,
+          "grammarSlug": "conjunction-prep",
+          "grammarCategory": "句子插入題",
+          "options": [
+            "Residential homeowners must apply for a separate municipal permit.",
+            "Several competitors recently relocated their headquarters to Europe.",
+            "Dr. Hsu will retire from the engineering department next spring.",
+            "It also charges twice as fast as conventional lithium storage banks."
+          ],
+          "answer": 3,
+          "explanation": "前句介紹技術優勢（先進溫控延長電池壽命五年），後句以 Consequently（因此）總結企業客戶能降低尖峰電費與保有穩定備援電力，中間填入「它的充電速度也是傳統鋰電儲能櫃的兩倍」最連貫。"
+        },
+        {
+          "id": "P6-11",
+          "blank": 11,
+          "grammarSlug": "conjunction-prep",
+          "grammarCategory": "轉折與承接副詞",
+          "options": [
+            "Furthermore",
+            "Otherwise",
+            "Instead",
+            "However"
+          ],
+          "answer": 0,
+          "explanation": "前句說台灣十二座工業區已展開首批安裝，本句接著說公司第三季還計畫進軍日本與澳洲市場，屬於遞進補充關係，故選 Furthermore（此外、更進一步）。"
+        },
+        {
+          "id": "P6-12",
+          "blank": 12,
+          "grammarSlug": "word-form",
+          "grammarCategory": "商務核心名詞",
+          "options": [
+            "assess",
+            "assessment",
+            "assessable",
+            "assessed"
+          ],
+          "answer": 1,
+          "explanation": "空格前有冠詞 an 與複合修飾語 on-site energy，後方缺少核心名詞，on-site energy assessment 意為「現場能源評估」。"
+        }
+      ]
+    },
+    {
+      "passageId": "P6-SET-4",
+      "docType": "系統維護通知（IT Service Notice）",
+      "title": "雲端薪資與請假系統升級維護",
+      "header": "NOTICE: Scheduled HR Portal Maintenance\nSaturday, July 19 | 10:00 P.M. – Sunday, July 20 | 4:00 A.M.",
+      "body": "To improve loading speed and strengthen data encryption, the IT Department will perform a scheduled upgrade on the internal HR Portal this weekend. During the six-hour maintenance window, employees will not be able to log in to view pay stubs, submit leave requests, [13] update personal tax information.\n\nAll supervisors are asked to approve any pending overtime forms before 6:00 P.M. on Friday so that payroll processing is not [14]. [15]\n\nOnce the upgrade is complete, you will notice a cleaner dashboard layout and faster mobile access. [16] you encounter any login errors on Monday morning, please submit a support ticket to the IT Helpdesk at ext. 4400.",
+      "questions": [
+        {
+          "id": "P6-13",
+          "blank": 13,
+          "grammarSlug": "conjunction-prep",
+          "grammarCategory": "對等連接詞",
+          "options": [
+            "nor of",
+            "yet",
+            "or",
+            "but"
+          ],
+          "answer": 2,
+          "explanation": "在否定句（will not be able to A, B, or C）中，列舉多項無法進行的動作時，連接詞應使用 or（無法查看薪資單、提出請假申請「或」更新個人稅務資料）。"
+        },
+        {
+          "id": "P6-14",
+          "blank": 14,
+          "grammarSlug": "participle",
+          "grammarCategory": "被動語態與字彙",
+          "options": [
+            "disruption",
+            "disruptive",
+            "disrupting",
+            "disrupted"
+          ],
+          "answer": 3,
+          "explanation": "so that payroll processing is not _______ 表達「以免薪資結算作業受到中斷／影響」，is not + 過去分詞構成被動語態，故選 disrupted。"
+        },
+        {
+          "id": "P6-15",
+          "blank": 15,
+          "grammarSlug": "conjunction-prep",
+          "grammarCategory": "句子插入題",
+          "options": [
+            "Please return borrowed laptops to the reception desk by noon.",
+            "External vendors must wear visitor passes in the parking garage.",
+            "The office gym will extend its weekend hours starting in August.",
+            "All previously saved records and historical pay slips will remain safely intact."
+          ],
+          "answer": 3,
+          "explanation": "系統維護前員工最擔心的就是原有紀錄遺失，緊接在提醒主管週五前簽核之後，補充說明「所有先前儲存的紀錄與歷史薪資單皆會完整保留」最符合 IT 維護公告語境。"
+        },
+        {
+          "id": "P6-16",
+          "blank": 16,
+          "grammarSlug": "subjunctive-inversion",
+          "grammarCategory": "條件倒裝句",
+          "options": [
+            "Had",
+            "Were",
+            "Unless",
+            "Should"
+          ],
+          "answer": 3,
+          "explanation": "原句為 If you should encounter...（萬一您在週一早上遇到任何登入錯誤…），省略 If 並將 Should 移至句首，後方接原形動詞 encounter。Had 需配 p.p.，Were 需配 to V/名詞/形容詞，Unless 語意相反。"
+        }
+      ]
+    },
+    {
+      "passageId": "P6-SET-5",
+      "docType": "邀請函（Invitation Letter）",
+      "title": "年度經銷商策略峰會邀請函",
+      "header": "Dear Valued Partner,\nApex Medical Devices Annual Distributor Summit",
+      "body": "On behalf of Apex Medical Devices, I am delighted to invite you to our Annual Distributor Summit, taking place October 8–9 at the Grand Harbor Convention Center in Kaohsiung. This year's theme focuses on expanding minimally invasive diagnostic tools across emerging Asian hospitals.\n\nAttendees will gain exclusive access to live product demonstrations and one-on-one consultations with our R&D specialists. [17] In addition, we will host an awards banquet on the evening of October 8 to honor our top-performing regional distributors.\n\nHotel accommodations at the adjacent Harbor View Hotel are available at a [18] corporate rate for registered guests. To take advantage of this special offer, please confirm your attendance [19] September 15. We are confident that your participation will contribute [20] to a productive and inspiring summit.",
+      "questions": [
+        {
+          "id": "P6-17",
+          "blank": 17,
+          "grammarSlug": "conjunction-prep",
+          "grammarCategory": "句子插入題",
+          "options": [
+            "Customers may exchange defective items at any participating pharmacy.",
+            "Our Kaohsiung manufacturing facility was constructed thirty years ago.",
+            "Several workshops will also cover regulatory compliance and clinical training.",
+            "The monthly newsletter has been discontinued due to low readership."
+          ],
+          "answer": 2,
+          "explanation": "本段都在介紹峰會的議程亮點（產品實機展示、研發專家一對一諮詢、頒獎晚宴），插入「數場工作坊也將涵蓋法規遵循與臨床培訓」完全扣合議程介紹。"
+        },
+        {
+          "id": "P6-18",
+          "blank": 18,
+          "grammarSlug": "participle",
+          "grammarCategory": "分詞形容詞",
+          "options": [
+            "discounting",
+            "discounts",
+            "discount",
+            "discounted"
+          ],
+          "answer": 3,
+          "explanation": "企業優惠房價（corporate rate）是「被打折的、享有折扣的」，多益飯店與旅遊主題超高頻搭配：a discounted rate（優惠價格）。"
+        },
+        {
+          "id": "P6-19",
+          "blank": 19,
+          "grammarSlug": "preposition",
+          "grammarCategory": "截止時間介系詞",
+          "options": [
+            "by",
+            "during",
+            "since",
+            "until"
+          ],
+          "answer": 0,
+          "explanation": "confirm your attendance（確認出席）是一次性報名動作，搭配截止日期 September 15 必須用 by（在九月十五日前）。"
+        },
+        {
+          "id": "P6-20",
+          "blank": 20,
+          "grammarSlug": "word-form",
+          "grammarCategory": "副詞修飾動詞",
+          "options": [
+            "greatly",
+            "greater",
+            "great",
+            "greatness"
+          ],
+          "answer": 0,
+          "explanation": "空格用來修飾動詞 contribute（貢獻），contribute greatly to... 意為「對…做出極大貢獻」，故選副詞 greatly。"
+        }
+      ]
+    }
+  ],
+  "part7": [
+    {
+      "passageId": "P7-SET-1",
+      "isDouble": false,
+      "docType": "單篇閱讀｜商務電子郵件（Email）",
+      "title": "辦公室搬遷與停車證申請通知",
+      "documents": [
+        {
+          "label": "電子郵件",
+          "header": "To: All Staff <all-staff@veritas-design.com>\nFrom: Grace Yeh, Office Manager <g.yeh@veritas-design.com>\nDate: March 4\nSubject: Relocation to Xinyi Plaza & Parking Permits",
+          "content": "Dear Team,\n\nAs announced at last month's town hall meeting, Veritas Design will officially relocate from our current Songshan office to the 14th floor of Xinyi Plaza on Monday, April 7. Moving boxes and color-coded floor labels will be delivered to each workstation on March 28. Please pack all personal items and label your monitors before leaving work on Friday, April 4. Professional movers will transport all labeled equipment over the weekend.\n\nPlease note that the IT team will disconnect desktop computers at 3:00 P.M. on April 4, so employees are encouraged to work from home during the afternoon if they have client deadlines.\n\nRegarding transportation, Xinyi Plaza is a three-minute walk from Taipei 101/World Trade Center MRT Station (Exit 4). Employees who commute by car or scooter may apply for a subsidized monthly parking permit in Basement Level 3. Because spaces are limited to 45 vehicles, permits will be allocated on a first-come, first-served basis. To request a spot, complete the online Facilities Form by 5:00 P.M. on March 18.\n\nIf you have questions about ergonomic desk setups in the new space, please contact Alex Kuo in Operations.\n\nBest regards,\nGrace Yeh"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P7-01",
+          "question": "When will Veritas Design begin operating at Xinyi Plaza?",
+          "options": [
+            "On April 7",
+            "On March 18",
+            "On March 28",
+            "On April 4"
+          ],
+          "answer": 0,
+          "explanation": "第一段第一句明確指出：Veritas Design will officially relocate... to the 14th floor of Xinyi Plaza on Monday, April 7（4 月 7 日週一正式搬遷啟用）。3 月 18 日是停車證申請截止日，3 月 28 日發箱子，4 月 4 日打包。"
+        },
+        {
+          "id": "P7-02",
+          "question": "Why are employees advised to consider working remotely on the afternoon of April 4?",
+          "options": [
+            "The Songshan building will undergo electrical repairs.",
+            "The MRT station near the office will be closed temporarily.",
+            "Office desktop computers will be unplugged mid-afternoon.",
+            "A mandatory town hall meeting will take place online."
+          ],
+          "answer": 2,
+          "explanation": "第二段說明：the IT team will disconnect desktop computers at 3:00 P.M. on April 4（IT 團隊將於 4 月 4 日下午三點拔除桌上型電腦電源／連線），對應選項 (C) unplugged mid-afternoon（同義替換 disconnect → unplug）。"
+        },
+        {
+          "id": "P7-03",
+          "question": "What is stated about parking permits at Xinyi Plaza?",
+          "options": [
+            "They are completely free of charge for all employees.",
+            "They must be requested directly from Alex Kuo.",
+            "They are reserved exclusively for senior executives.",
+            "They are assigned in the order applications are received."
+          ],
+          "answer": 3,
+          "explanation": "第三段指出 permits will be allocated on a first-come, first-served basis（依先到先得順序分配），同義替換為 (D) in the order applications are received。注意 subsidized 是「有補助（並非完全免費）」，Alex Kuo 負責的是人體工學辦公桌配置。"
+        },
+        {
+          "id": "P7-04",
+          "question": "What should employees do by March 18 if they want a parking space?",
+          "options": [
+            "Pick up moving boxes at the reception desk",
+            "Email their vehicle registration to Grace Yeh",
+            "Fill out an online Facilities Form",
+            "Visit Basement Level 3 to register in person"
+          ],
+          "answer": 2,
+          "explanation": "第三段最後一句明確寫道：To request a spot, complete the online Facilities Form by 5:00 P.M. on March 18（填寫線上總務表單）。"
+        }
+      ]
+    },
+    {
+      "passageId": "P7-SET-2",
+      "isDouble": false,
+      "docType": "單篇閱讀｜活動宣傳海報與議程表（Schedule）",
+      "title": "2026 亞太數位商務論壇議程",
+      "documents": [
+        {
+          "label": "論壇議程表",
+          "header": "ASIA-PACIFIC DIGITAL COMMERCE FORUM\nDate: Friday, September 25 | Venue: Nangang Exhibition Center, Hall 2\nEarly-Bird Registration (until Aug 31): NT$3,200 | Standard Rate: NT$4,500",
+          "content": "SCHEDULE OF EVENTS\n\n09:00 – 09:30 | Registration & Morning Coffee (Main Lobby)\n09:30 – 10:30 | Opening Keynote: AI-Driven Supply Chains in 2027\n               Speaker: Elena Sato, VP of Logistics, Pacific Retail Group (Grand Hall A)\n10:45 – 12:00 | Concurrent Breakout Sessions:\n               • Track 1 (Room 201): Cross-Border E-Commerce Taxation — Kenji Tanaka\n               • Track 2 (Room 202): Retaining Gen-Z Consumers — Mei-Ling Chou\n12:00 – 13:30 | Networking Buffet Lunch (Skyline Terrace – Included with ticket)\n13:30 – 15:00 | Live Panel: Navigating Data Privacy Regulations Across Asia (Grand Hall A)\n15:15 – 16:45 | Hands-On Workshop: Building Automated Customer Support Flows (Lab B)\n               *Limited to 40 participants; pre-selection required during online registration.\n\nNote: Groups of three or more from the same organization receive a 15% discount on standard tickets. Digital presentation slides will be emailed to all attendees within 48 hours after the forum concludes."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P7-05",
+          "question": "Who will deliver a presentation specifically about customer retention?",
+          "options": [
+            "Mei-Ling Chou",
+            "Elena Sato",
+            "Kenji Tanaka",
+            "An unnamed panelist"
+          ],
+          "answer": 0,
+          "explanation": "10:45–12:00 的分組場次 Track 2 主題為 Retaining Gen-Z Consumers（留住 Z 世代消費者），講者為 Mei-Ling Chou。"
+        },
+        {
+          "id": "P7-06",
+          "question": "What is required to attend the afternoon workshop in Lab B?",
+          "options": [
+            "Signing up for it in advance when registering",
+            "Paying an extra materials fee at the lobby",
+            "Bringing a printed copy of the slides",
+            "Attending Track 1 in the morning"
+          ],
+          "answer": 0,
+          "explanation": "15:15–16:45 Lab B 工作坊下方星號註明：Limited to 40 participants; pre-selection required during online registration（線上報名時必須預先選課報名），對應 (A)。"
+        },
+        {
+          "id": "P7-07",
+          "question": "According to the schedule, what is included for every registered attendee?",
+          "options": [
+            "A buffet lunch and digital copies of the presentation slides",
+            "Free overnight hotel accommodations near Nangang",
+            "A guaranteed seat in the Lab B hands-on workshop",
+            "A 15% discount regardless of group size"
+          ],
+          "answer": 0,
+          "explanation": "議程顯示 12:00–13:30 自助午餐註明 Included with ticket，文末 Note 也說明 Digital presentation slides will be emailed to all attendees（簡報電子檔將於會後 48 小時內寄給所有與會者）。"
+        },
+        {
+          "id": "P7-08",
+          "question": "How can a company qualify for the 15% ticket discount?",
+          "options": [
+            "By sponsoring the networking lunch",
+            "By sending a keynote speaker",
+            "By registering before August 31",
+            "By purchasing at least three standard tickets together"
+          ],
+          "answer": 3,
+          "explanation": "文末 Note 指出：Groups of three or more from the same organization receive a 15% discount on standard tickets（同一機構三人以上購買標準票即享 85 折優惠）。"
+        }
+      ]
+    },
+    {
+      "passageId": "P7-SET-3",
+      "isDouble": false,
+      "docType": "單篇閱讀｜商業新聞報導（Article）",
+      "title": "在地連鎖咖啡品牌導入智慧烘焙系統",
+      "documents": [
+        {
+          "label": "財經新聞",
+          "header": "TAIWAN BUSINESS WEEKLY — October 14\nBeanCraft Roasters Cuts Energy Waste With Smart Roasting Tech",
+          "content": "TAICHUNG — BeanCraft Roasters, a specialty coffee chain operating 28 cafés across central and northern Taiwan, has reported a 22 percent drop in roasting energy consumption after installing sensor-guided roasters at its Taichung central facility six months ago.\n\nTraditionally, master roasters relied heavily on manual temperature adjustments and visual inspections, which occasionally led to inconsistent flavor profiles between batches. The newly adopted machines continuously monitor bean moisture and airflow, automatically fine-tuning heat levels to guarantee consistent quality.\n\n\"Initially, some of our veteran roasters worried that automation would diminish the artisanal character of our coffee,\" said Operations VP Victor Chang. \"Instead, the system handles repetitive thermal tracking, freeing our staff to focus on sourcing direct-trade beans from smallholder farms and crafting seasonal blends.\"\n\nEncouraged by lower utility bills and a 15 percent rise in wholesale orders from boutique hotels, BeanCraft plans to open its first southern flagship store in Kaohsiung early next year and expand its online subscription service."
+        }
+      ],
+      "questions": [
+        {
+          "id": "P7-09",
+          "question": "What is the main focus of the article?",
+          "options": [
+            "A shortage of coffee beans from smallholder farms",
+            "How new roasting technology benefited a Taiwanese coffee chain",
+            "Why BeanCraft decided to close its Taichung facility",
+            "A merger between a coffee chain and a boutique hotel group"
+          ],
+          "answer": 1,
+          "explanation": "全文圍繞 BeanCraft 導入智慧感測烘焙設備後，成功降低 22% 能源消耗、穩定品質、讓烘焙師專注於選豆與研發，並帶動批發訂單成長，故主旨為 (B)。"
+        },
+        {
+          "id": "P7-10",
+          "question": "What problem did BeanCraft occasionally face before upgrading its equipment?",
+          "options": [
+            "Frequent shipping delays to northern Taiwan",
+            "High employee turnover among café baristas",
+            "A lack of space at its Kaohsiung flagship store",
+            "Uneven coffee taste from one batch to another"
+          ],
+          "answer": 3,
+          "explanation": "第二段指出舊有人工控溫 occasionally led to inconsistent flavor profiles between batches（偶爾導致不同批次間風味不一致），同義替換為 (D) Uneven coffee taste from one batch to another。"
+        },
+        {
+          "id": "P7-11",
+          "question": "According to Victor Chang, how did experienced roasters initially react to the upgrade?",
+          "options": [
+            "They were concerned it might harm the craft quality of the coffee.",
+            "They requested higher overtime compensation.",
+            "They immediately volunteered to relocate to Kaohsiung.",
+            "They complained that the machines were too noisy."
+          ],
+          "answer": 0,
+          "explanation": "第三段引述 Victor Chang 的話：some of our veteran roasters worried that automation would diminish the artisanal character of our coffee（擔心自動化會削弱咖啡的手工職人風味），對應 (A)。"
+        },
+        {
+          "id": "P7-12",
+          "question": "What does BeanCraft plan to do early next year?",
+          "options": [
+            "Discontinue its wholesale sales to hotels",
+            "Launch a new flagship location in southern Taiwan",
+            "Replace all café staff with automated kiosks",
+            "Purchase a coffee farm overseas"
+          ],
+          "answer": 1,
+          "explanation": "最後一段指出：BeanCraft plans to open its first southern flagship store in Kaohsiung early next year（計畫明年初在高雄開設首間南台灣旗艦店）。"
+        }
+      ]
+    },
+    {
+      "passageId": "P7-SET-4",
+      "isDouble": true,
+      "docType": "雙篇閱讀｜訂購單＋客訴電子郵件（Invoice + Email）",
+      "title": "辦公設備採購單與發票異常客訴",
+      "documents": [
+        {
+          "label": "文件一：出貨單與發票（Invoice）",
+          "header": "PRO-OFFICE SOLUTIONS LTD.\nInvoice #POS-2026-4118 | Issue Date: June 3 | Payment Terms: Net 30\nBill To: Horizon Architecture Studio (Attn: Jason Tsai)",
+          "content": "Item Code | Description                        | Qty | Unit Price | Subtotal\n------------------------------------------------------------------------------\nCH-402    | ErgoMesh Executive Chair (Black)   |  6  | NT$6,500   | NT$39,000\nDK-118    | Sit-Stand Desk Frame (White)       |  4  | NT$11,000  | NT$44,000\nLP-095    | LED Architect Desk Lamp            |  6  | NT$1,800   | NT$10,800\n------------------------------------------------------------------------------\nSubtotal: NT$93,800\nCorporate Member Discount (10%): -NT$9,380\nAssembly & White-Glove Delivery Fee: NT$2,500\nTOTAL AMOUNT DUE: NT$86,920\n\n*Return Policy: Damaged or incorrect items must be reported within 7 days of delivery for a free replacement or full credit."
+        },
+        {
+          "label": "文件二：客戶電子郵件（Email）",
+          "header": "To: billing@pro-office.com.tw\nFrom: jason.tsai@horizon-arch.tw\nDate: June 8\nSubject: Discrepancy in Delivery & Invoice #POS-2026-4118",
+          "content": "Dear Pro-Office Billing Team,\n\nWe received our furniture shipment on June 5, and our studio team is very happy with the quality of the chairs and desks. However, after inspecting the boxes and comparing them against Invoice #POS-2026-4118, we noticed two issues that need to be rectified before we release payment.\n\nFirst, although we ordered and were billed for six LED Architect Desk Lamps, only four lamps were included in the delivery. Second, our sales representative, Ms. Chloe Wang, promised in writing on May 29 that the delivery and assembly fee would be waived because our order subtotal exceeded NT$80,000.\n\nCould you please arrange to ship the remaining two lamps as soon as possible and send a corrected invoice reflecting the waived delivery fee? Once we receive the updated invoice and the missing items, our accounting team will process the wire transfer immediately.\n\nBest regards,\nJason Tsai\nStudio Administrator, Horizon Architecture Studio"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P7-13",
+          "question": "Why did Jason Tsai write to Pro-Office Solutions?",
+          "options": [
+            "To cancel his entire furniture order",
+            "To ask for an extension on the 30-day payment deadline",
+            "To report missing items and an unexpected fee on the invoice",
+            "To complain that the desk frames were damaged during delivery"
+          ],
+          "answer": 2,
+          "explanation": "雙篇核心目的題：Jason 在信中指出兩件事——檯燈少送兩盞（missing items），且先前業務承諾免除的運費與組裝費仍被列在發票上（unexpected fee），故選 (C)。"
+        },
+        {
+          "id": "P7-14",
+          "question": "What is the item code of the product that was partially missing from the shipment?",
+          "options": [
+            "CH-402",
+            "LP-095",
+            "DK-118",
+            "POS-2026"
+          ],
+          "answer": 1,
+          "explanation": "跨篇對照題！文件二說少了兩盞 LED Architect Desk Lamps，回頭對照文件一表格，LED Architect Desk Lamp 的品號為 LP-095。"
+        },
+        {
+          "id": "P7-15",
+          "question": "How much should Horizon Architecture Studio pay in total after the billing fee is corrected?",
+          "options": [
+            "NT$80,000",
+            "NT$84,420",
+            "NT$86,920",
+            "NT$91,300"
+          ],
+          "answer": 1,
+          "explanation": "多益雙篇必考計算題！文件一原總金額為 NT$86,920，其中包含 NT$2,500 的 Assembly & White-Glove Delivery Fee。若免除這筆 NT$2,500（其餘商品仍補齊出貨），應付金額為 86,920 − 2,500 = NT$84,420！"
+        },
+        {
+          "id": "P7-16",
+          "question": "Based on Pro-Office's return policy, is Horizon Architecture Studio eligible for free resolution of the missing items?",
+          "options": [
+            "Yes, because corporate members have 30 days to report shortages.",
+            "No, because the email was sent after the seven-day limit.",
+            "Yes, because the issue was reported three days after delivery.",
+            "No, because lighting fixtures are excluded from the return policy."
+          ],
+          "answer": 2,
+          "explanation": "跨篇推論題！文件一退換貨條款規定須於「交貨後 7 天內（within 7 days of delivery）」回報。文件二顯示 6 月 5 日收到貨，6 月 8 日就寫信回報（僅隔 3 天），完全符合條件！"
+        }
+      ]
+    },
+    {
+      "passageId": "P7-SET-5",
+      "isDouble": true,
+      "docType": "雙篇閱讀｜徵才啟事＋應徵信（Job Ad + Cover Letter）",
+      "title": "資深供應鏈分析師徵才公告與求職信",
+      "documents": [
+        {
+          "label": "文件一：徵才公告（Job Posting）",
+          "header": "CAREER OPPORTUNITY: Senior Supply Chain Analyst\nCompany: Formosa Precision Components (Hsinchu Science Park)\nEmployment Type: Full-Time | Hybrid (3 days on-site, 2 days remote)",
+          "content": "About the Role:\nFormosa Precision Components is seeking an experienced Senior Supply Chain Analyst to optimize raw material procurement and oversee vendor performance across Taiwan, Japan, and Vietnam.\n\nKey Qualifications:\n• Bachelor's degree in Industrial Engineering, Supply Chain Management, or a related field.\n• Minimum of 4 years of experience in manufacturing logistics or ERP inventory planning.\n• Proficiency in SQL and Excel data modeling; experience with SAP ERP is strongly preferred.\n• Fluent written and spoken English (TOEIC 800+ or equivalent); conversational Japanese is a plus.\n\nBenefits:\n• Competitive salary commensurate with experience plus performance bonuses.\n• Annual health checkup allowance and continuing education subsidies.\n\nHow to Apply:\nSend your résumé and a cover letter highlighting a past cost-saving project to hr@formosa-precision.com by November 20. Please include the job code [SC-2026] in the email subject line."
+        },
+        {
+          "label": "文件二：求職信（Cover Letter Email）",
+          "header": "To: hr@formosa-precision.com\nFrom: emily.huang@mail.tw\nDate: November 14\nSubject: Application for Senior Supply Chain Analyst [SC-2026]",
+          "content": "Dear Hiring Committee,\n\nI am writing to express my strong interest in the Senior Supply Chain Analyst position at Formosa Precision Components. With six years of experience in electronics manufacturing logistics and a master's degree in Industrial Engineering, I am eager to contribute to your regional procurement strategy.\n\nIn my current role as a Logistics Specialist at Zenith Electronics in Taoyuan, I manage inventory forecasting using SAP ERP and SQL dashboards. Last year, I led a vendor consolidation initiative across twelve packaging suppliers that shortened average lead times by 18 percent and saved the company over NT$4.2 million annually.\n\nAdditionally, I regularly coordinate with overseas clients in English and recently achieved a TOEIC score of 895. While I do not currently speak Japanese, I have worked closely with component distributors in Vietnam and understand regional customs procedures well.\n\nI have attached my résumé for your review and would welcome the opportunity to discuss how my analytical background aligns with your team's goals. I am available for an interview at your convenience.\n\nSincerely,\nEmily Huang"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P7-17",
+          "question": "What work arrangement does Formosa Precision Components offer for this role?",
+          "options": [
+            "100% remote work from anywhere in Taiwan",
+            "Night shifts at the Taoyuan manufacturing plant",
+            "A mix of in-office and remote workdays each week",
+            "A six-month temporary contract with possible renewal"
+          ],
+          "answer": 2,
+          "explanation": "文件一標頭寫明：Hybrid (3 days on-site, 2 days remote)（混合辦公，每週進辦公室三天、遠端兩天），同義替換為 (C) A mix of in-office and remote workdays each week。"
+        },
+        {
+          "id": "P7-18",
+          "question": "Which preference listed in the job posting does Emily Huang NOT meet?",
+          "options": [
+            "Having at least four years of logistics experience",
+            "Having familiarity with SAP ERP software",
+            "Achieving an English proficiency level equivalent to TOEIC 800+",
+            "Being able to hold conversations in Japanese"
+          ],
+          "answer": 3,
+          "explanation": "跨篇比對題！文件一寫 conversational Japanese is a plus（會日文會話加分），文件二第三段 Emily 明確坦言 While I do not currently speak Japanese...（目前不會說日文）。其餘年資（6 年）、SAP ERP、多益 895 分皆完全符合甚至超越標準。"
+        },
+        {
+          "id": "P7-19",
+          "question": "What concrete achievement did Emily Huang highlight to satisfy the application instructions?",
+          "options": [
+            "Opening a new customs brokerage office in Vietnam",
+            "Consolidating suppliers to cut lead times and save NT$4.2 million per year",
+            "Launching a new SQL training program for interns",
+            "Negotiating a hybrid work policy at Zenith Electronics"
+          ],
+          "answer": 1,
+          "explanation": "文件一要求求職信必須強調過往節省成本的專案（highlighting a past cost-saving project）；文件二第二段 Emily 提到她主導整合 12 家包材供應商，將平均交期縮短 18%、每年節省超過新台幣 420 萬元，對應 (B)。"
+        },
+        {
+          "id": "P7-20",
+          "question": "What can be inferred about Emily Huang's application?",
+          "options": [
+            "It was submitted after the official deadline.",
+            "It is missing the required job code in the subject line.",
+            "It was referred by a current employee in Hsinchu.",
+            "It followed all submission requirements stated in the job posting."
+          ],
+          "answer": 3,
+          "explanation": "跨篇檢查題！文件一要求：① 11 月 20 日前寄出（Emily 11 月 14 日寄出）、② 附上履歷與強調節省成本專案的求職信（皆有做到）、③ 主旨加上職缺代碼 [SC-2026]（主旨完全正確）。因此她完全符合所有投遞規定，故選 (D)。"
+        }
+      ]
+    }
+  ]
+}
