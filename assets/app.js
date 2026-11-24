@@ -146,6 +146,10 @@
   }
 
   function switchView(viewId) {
+    if (document.activeElement && typeof document.activeElement.blur === "function") {
+      document.activeElement.blur();
+    }
+    document.body.classList.remove("keyboard-open");
     activeView = viewId;
     document.querySelectorAll(".nav-tab, .mb-tab").forEach((b) => {
       b.classList.toggle("active", b.dataset.view === viewId);
@@ -749,7 +753,7 @@
   }
 
   // =========================================================================
-  // 3. 鍵盤打字背單字（致敬 Qwerty Learner）
+  // 3. 鍵盤打字背單字（致敬 Qwerty Learner｜手機不自動彈鍵盤、局部更新防跳動）
   // =========================================================================
   const typingState = {
     source: "toeic1656", // "toeic1656" | "core600" | "bookmarks"
@@ -764,6 +768,10 @@
     sessionTotalKeys: 0,
     sessionCompletedWords: 0,
   };
+
+  function isTouchDevice() {
+    return window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window;
+  }
 
   function getTypingWords() {
     if (typingState.source === "toeic1656") {
@@ -794,6 +802,80 @@
     }));
   }
 
+  function buildTypingLettersHtml(target) {
+    return target
+      .split("")
+      .map((ch, i) => {
+        if (ch === " ") {
+          return `<span class="ch-space">${i < typingState.typed.length ? "·" : " "}</span>`;
+        }
+        if (i < typingState.typed.length) {
+          return `<span class="ch-done">${esc(ch)}</span>`;
+        }
+        if (i === typingState.typed.length && typingState.errFlag) {
+          return `<span class="ch-err">${typingState.dictation ? "_" : esc(ch)}</span>`;
+        }
+        if (typingState.dictation) {
+          return `<span class="ch-hidden">_</span>`;
+        }
+        return `<span class="ch-todo">${esc(ch)}</span>`;
+      })
+      .join("");
+  }
+
+  // 局部更新打字卡片內容（不重建 <input> DOM，避免手機跳動或強制彈出鍵盤）
+  function updateTypingCard() {
+    const words = getTypingWords();
+    if (!words.length) {
+      renderTyping();
+      return;
+    }
+    if (typingState.index >= words.length) typingState.index = 0;
+    const cur = words[typingState.index];
+    const isBm = !!state.bookmarks[cur.word.toLowerCase()];
+    const acc = typingState.sessionTotalKeys
+      ? Math.round((typingState.sessionCorrectKeys / typingState.sessionTotalKeys) * 100)
+      : 100;
+
+    const progEl = document.getElementById("typingProgress");
+    const statsEl = document.getElementById("typingStats");
+    const bmBtn = document.getElementById("btnTypeBm");
+    const lettersEl = document.getElementById("typingLetters");
+    const ipaEl = document.getElementById("typingIpa");
+    const zhEl = document.getElementById("typingZh");
+    const exEl = document.getElementById("typingExample");
+    const input = document.getElementById("typingInput");
+
+    if (progEl) progEl.textContent = `本輪進度：${typingState.index + 1} / ${words.length}`;
+    if (statsEl) statsEl.textContent = `本次完成：${typingState.sessionCompletedWords} 字・正確率：${acc}%`;
+    if (bmBtn) {
+      bmBtn.textContent = isBm ? "★ 已收藏" : "☆ 收藏生字";
+      bmBtn.classList.toggle("btn-amber", isBm);
+    }
+    if (lettersEl) {
+      lettersEl.innerHTML = buildTypingLettersHtml(cur.word);
+      lettersEl.classList.remove("shake");
+      if (typingState.errFlag) {
+        void lettersEl.offsetWidth;
+        lettersEl.classList.add("shake");
+      }
+    }
+    if (ipaEl) ipaEl.textContent = cur.ipa || "";
+    if (zhEl) zhEl.textContent = cur.zh || "";
+    if (exEl) {
+      if (cur.example) {
+        exEl.style.display = "block";
+        exEl.textContent = `例句：${cur.example}`;
+      } else {
+        exEl.style.display = "none";
+        exEl.textContent = "";
+      }
+    }
+    if (input && input.value !== typingState.typed) {
+      input.value = typingState.typed;
+    }
+  }
+
   function renderTyping() {
     const el = document.getElementById("view-typing");
     const words = getTypingWords();
@@ -814,81 +896,56 @@
       )
       .join("");
 
-    const acc = typingState.sessionTotalKeys
-      ? Math.round((typingState.sessionCorrectKeys / typingState.sessionTotalKeys) * 100)
-      : 100;
-
     let stageHtml = "";
     if (!words.length) {
       stageHtml = `<div class="card empty-state">目前清單為空（若選「我的生字本」，請先去單字館或打字時收藏幾個生字）。</div>`;
     } else {
-      const cur = words[typingState.index];
-      const target = cur.word;
-      const isBm = !!state.bookmarks[target.toLowerCase()];
-
-      const charsHtml = target
-        .split("")
-        .map((ch, i) => {
-          if (ch === " ") {
-            return `<span class="ch-space">${i < typingState.typed.length ? "·" : " "}</span>`;
-          }
-          if (i < typingState.typed.length) {
-            return `<span class="ch-done">${esc(ch)}</span>`;
-          }
-          if (i === typingState.typed.length && typingState.errFlag) {
-            return `<span class="ch-err">${typingState.dictation ? "_" : esc(ch)}</span>`;
-          }
-          if (typingState.dictation) {
-            return `<span class="ch-hidden">_</span>`;
-          }
-          return `<span class="ch-todo">${esc(ch)}</span>`;
-        })
-        .join("");
-
       stageHtml = `
-        <div class="card typing-box">
-          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-            <span class="pill blue">本輪進度：${typingState.index + 1} / ${words.length}</span>
-            <span class="pill green">本次完成：${typingState.sessionCompletedWords} 字・按鍵正確率：${acc}%</span>
+        <div class="card typing-box" id="typingCard">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
+            <span class="pill blue" id="typingProgress"></span>
+            <span class="pill green" id="typingStats"></span>
             <div style="display:flex;gap:6px;">
-              <button class="btn btn-sm" id="btnTypeSpeak">重播發音</button>
-              <button class="btn btn-sm ${isBm ? "btn-amber" : ""}" id="btnTypeBm">${isBm ? "★ 已收藏" : "☆ 收藏生字"}</button>
+              <button class="btn btn-sm" id="btnTypeSpeak" type="button">發音</button>
+              <button class="btn btn-sm" id="btnTypeBm" type="button">☆ 收藏生字</button>
+              <button class="btn btn-sm typing-blur-btn" id="btnHideKb" type="button">收起鍵盤</button>
             </div>
           </div>
 
-          <div class="typing-letters ${typingState.errFlag ? "shake" : ""}" id="typingLetters">${charsHtml}</div>
-          <div class="muted" style="margin-bottom:10px;">${esc(cur.ipa)}</div>
-          <div style="font-size:1.2rem;font-weight:800;margin-bottom:8px;">${esc(cur.zh)}</div>
-          ${cur.example ? `<div class="muted" style="font-size:0.9rem;max-width:600px;margin:0 auto 12px;">例句：${esc(cur.example)}</div>` : ""}
+          <div class="typing-letters" id="typingLetters"></div>
+          <div class="muted" id="typingIpa" style="margin-bottom:8px;"></div>
+          <div id="typingZh" style="font-size:1.15rem;font-weight:800;margin-bottom:8px;"></div>
+          <div class="muted" id="typingExample" style="display:none;font-size:0.88rem;max-width:600px;margin:0 auto 10px;"></div>
 
           <div>
-            <input id="typingInput" class="typing-input-proxy" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-              placeholder="點此框內直接拼寫英文單字（Enter 跳下一個）..." value="${esc(typingState.typed)}" />
+            <input id="typingInput" class="typing-input-proxy" type="text" inputmode="latin" enterkeyhint="next"
+              autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+              placeholder="點此拼寫英文單字（未點擊前不彈出鍵盤）" />
           </div>
 
-          <div style="display:flex;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap;">
-            <button class="btn btn-sm" id="btnTypePrev">← 上一字</button>
-            <button class="btn btn-sm" id="btnTypeHint">提示下一個字母</button>
-            <button class="btn btn-sm" id="btnTypeNext">跳過下一字 →</button>
+          <div style="display:flex;justify-content:center;gap:8px;margin-top:14px;flex-wrap:wrap;">
+            <button class="btn btn-sm" id="btnTypePrev" type="button">← 上一字</button>
+            <button class="btn btn-sm" id="btnTypeHint" type="button">提示字母</button>
+            <button class="btn btn-sm" id="btnTypeNext" type="button">下一字 →</button>
           </div>
         </div>
       `;
     }
 
     el.innerHTML = `
-      <div class="card">
+      <div class="card typing-settings-card">
         <div class="card-title">
-          <span>鍵盤打字背單字（拼寫＋發音肌肉記憶訓練）</span>
+          <span>鍵盤打字背單字（拼寫＋發音訓練）</span>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button class="btn btn-sm ${typingState.dictation ? "btn-amber" : ""}" id="btnDictationToggle">
-              ${typingState.dictation ? "默寫模式：開啟（隱藏拼字）" : "默寫模式：關閉（顯示提示）"}
+            <button class="btn btn-sm ${typingState.dictation ? "btn-amber" : ""}" id="btnDictationToggle" type="button">
+              ${typingState.dictation ? "默寫模式：開" : "默寫模式：關"}
             </button>
-            <button class="btn btn-sm ${typingState.autoSpeak ? "btn-green" : ""}" id="btnAutoSpeakToggle">
+            <button class="btn btn-sm ${typingState.autoSpeak ? "btn-green" : ""}" id="btnAutoSpeakToggle" type="button">
               自動發音：${typingState.autoSpeak ? "開" : "關"}
             </button>
           </div>
         </div>
-        <div class="toolbar">
+        <div class="toolbar" style="margin-bottom:0;">
           <select id="typingSourceSel" class="select-input">
             <option value="toeic1656" ${typingState.source === "toeic1656" ? "selected" : ""}>多益 1,656 高頻詞庫（83 章）</option>
             <option value="core600" ${typingState.source === "core600" ? "selected" : ""}>600 核心主題單字（50 主題）</option>
@@ -920,7 +977,7 @@
         typingState.index = 0;
         typingState.typed = "";
         typingState.errFlag = false;
-        renderTyping();
+        updateTypingCard();
       });
     }
     const tpSel = document.getElementById("typingTopicSel");
@@ -930,59 +987,96 @@
         typingState.index = 0;
         typingState.typed = "";
         typingState.errFlag = false;
-        renderTyping();
+        updateTypingCard();
       });
     }
-    document.getElementById("btnDictationToggle").addEventListener("click", () => {
+    document.getElementById("btnDictationToggle").addEventListener("click", (e) => {
       typingState.dictation = !typingState.dictation;
-      renderTyping();
+      e.currentTarget.textContent = typingState.dictation ? "默寫模式：開" : "默寫模式：關";
+      e.currentTarget.classList.toggle("btn-amber", typingState.dictation);
+      updateTypingCard();
     });
-    document.getElementById("btnAutoSpeakToggle").addEventListener("click", () => {
+    document.getElementById("btnAutoSpeakToggle").addEventListener("click", (e) => {
       typingState.autoSpeak = !typingState.autoSpeak;
-      renderTyping();
+      e.currentTarget.textContent = `自動發音：${typingState.autoSpeak ? "開" : "關"}`;
+      e.currentTarget.classList.toggle("btn-green", typingState.autoSpeak);
     });
 
     if (words.length) {
-      const cur = words[typingState.index];
+      updateTypingCard();
       const input = document.getElementById("typingInput");
-      input.focus();
-      input.setSelectionRange(input.value.length, input.value.length);
+      const card = document.getElementById("typingCard");
+
+      // 僅在桌機自動聚焦；手機版不搶焦點，避免切換頁面或切字時自動彈出鍵盤遮擋上方
+      if (!isTouchDevice()) {
+        input.focus();
+      }
+
+      input.addEventListener("focus", () => {
+        if (isTouchDevice() && card) {
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }, 120);
+        }
+      });
+
+      document.getElementById("btnHideKb").addEventListener("click", () => {
+        input.blur();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
 
       document.getElementById("btnTypeSpeak").addEventListener("click", () => {
-        speak(cur.word);
-        input.focus();
+        const list = getTypingWords();
+        if (list[typingState.index]) speak(list[typingState.index].word);
       });
+
       document.getElementById("btnTypeBm").addEventListener("click", () => {
-        toggleBookmark(cur);
-        renderTyping();
+        const list = getTypingWords();
+        if (list[typingState.index]) {
+          toggleBookmark(list[typingState.index]);
+          updateTypingCard();
+        }
       });
+
       document.getElementById("btnTypePrev").addEventListener("click", () => {
-        typingState.index = (typingState.index - 1 + words.length) % words.length;
+        const list = getTypingWords();
+        if (!list.length) return;
+        typingState.index = (typingState.index - 1 + list.length) % list.length;
         typingState.typed = "";
         typingState.errFlag = false;
-        renderTyping();
-        if (typingState.autoSpeak) speak(words[typingState.index].word);
+        updateTypingCard();
+        if (typingState.autoSpeak) speak(list[typingState.index].word);
       });
+
       document.getElementById("btnTypeNext").addEventListener("click", () => {
-        typingState.index = (typingState.index + 1) % words.length;
+        const list = getTypingWords();
+        if (!list.length) return;
+        typingState.index = (typingState.index + 1) % list.length;
         typingState.typed = "";
         typingState.errFlag = false;
-        renderTyping();
-        if (typingState.autoSpeak) speak(words[typingState.index].word);
+        updateTypingCard();
+        if (typingState.autoSpeak) speak(list[typingState.index].word);
       });
+
       document.getElementById("btnTypeHint").addEventListener("click", () => {
+        const list = getTypingWords();
+        const cur = list[typingState.index];
+        if (!cur) return;
         if (typingState.typed.length < cur.word.length) {
           typingState.typed += cur.word[typingState.typed.length];
           typingState.errFlag = false;
           if (typingState.typed.toLowerCase() === cur.word.toLowerCase()) {
-            finishTypedWord(words, cur);
+            finishTypedWord(list, cur);
           } else {
-            renderTyping();
+            updateTypingCard();
           }
         }
       });
 
       input.addEventListener("input", () => {
+        const list = getTypingWords();
+        const cur = list[typingState.index];
+        if (!cur) return;
         const val = input.value;
         // 允許 résumé 也能用 resume 鍵入
         const normTarget = cur.word.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -994,25 +1088,29 @@
           typingState.typed = cur.word.slice(0, val.length);
           typingState.errFlag = false;
           if (normVal.length === normTarget.length) {
-            finishTypedWord(words, cur);
+            finishTypedWord(list, cur);
           } else {
-            renderTyping();
+            updateTypingCard();
           }
         } else {
           typingState.sessionTotalKeys++;
           typingState.errFlag = true;
-          renderTyping();
+          // 保留目前正確前綴，讓手機打錯字不需要一直按退格
+          input.value = typingState.typed;
+          updateTypingCard();
         }
       });
 
       input.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
           e.preventDefault();
-          typingState.index = (typingState.index + 1) % words.length;
+          const list = getTypingWords();
+          if (!list.length) return;
+          typingState.index = (typingState.index + 1) % list.length;
           typingState.typed = "";
           typingState.errFlag = false;
-          renderTyping();
-          if (typingState.autoSpeak) speak(words[typingState.index].word);
+          updateTypingCard();
+          if (typingState.autoSpeak) speak(list[typingState.index].word);
         }
       });
     }
@@ -1026,7 +1124,7 @@
     typingState.index = (typingState.index + 1) % words.length;
     typingState.typed = "";
     typingState.errFlag = false;
-    renderTyping();
+    updateTypingCard();
     if (typingState.autoSpeak && words[typingState.index]) {
       speak(words[typingState.index].word);
     }
@@ -1849,8 +1947,29 @@
     }
   });
 
+  // ===== 手機虛擬鍵盤狀態偵測（開啟鍵盤時自動隱藏底部列與收合頂部設定卡，防止上方單字被遮住）=====
+  function initMobileKeyboardGuard() {
+    document.addEventListener("focusin", (e) => {
+      if (!isTouchDevice()) return;
+      const tag = e.target && e.target.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") {
+        document.body.classList.add("keyboard-open");
+      }
+    });
+    document.addEventListener("focusout", () => {
+      setTimeout(() => {
+        const active = document.activeElement;
+        const tag = active && active.tagName;
+        if (tag !== "INPUT" && tag !== "TEXTAREA") {
+          document.body.classList.remove("keyboard-open");
+        }
+      }, 100);
+    });
+  }
+
   // ===== 啟動初始化 =====
   initHeaderControls();
+  initMobileKeyboardGuard();
   initPWA();
   renderDashboard();
 })();

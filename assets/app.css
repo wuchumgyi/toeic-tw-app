@@ -1104,4 +1104,51 @@ body.dark .formula-box {
   .passage-header {
     font-size: 0.78rem;
   }
+
+  /* 手機鍵盤彈出時的無遮擋模式 */
+  .typing-blur-btn {
+    display: none;
+  }
+
+  body.keyboard-open .mobile-bottom-nav {
+    display: none !important;
+  }
+
+  body.keyboard-open .topbar {
+    position: static;
+  }
+
+  body.keyboard-open .typing-settings-card {
+    display: none;
+  }
+
+  body.keyboard-open .typing-blur-btn {
+    display: inline-flex;
+  }
+
+  body.keyboard-open .typing-box {
+    padding: 14px 12px;
+    margin-bottom: 12px;
+  }
+
+  body.keyboard-open .typing-letters {
+    font-size: 1.6rem;
+    margin: 10px 0 6px;
+    min-height: 38px;
+  }
+
+  body.keyboard-open .container {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  body.keyboard-open .footer-note {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .typing-blur-btn {
+    display: none;
+  }
 }
