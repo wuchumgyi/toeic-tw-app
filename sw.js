@@ -1,4 +1,4 @@
-const CACHE_NAME = "toeic-tw-pwa-v1.2.0";
+const CACHE_NAME = "toeic-tw-pwa-v1.3.0";
 const CORE_ASSETS = [
   "./",
   "./index.html",

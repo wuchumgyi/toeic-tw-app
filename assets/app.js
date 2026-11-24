@@ -283,6 +283,7 @@
         <div class="card-title">
           <span>歡迎回來！今天準備攻克哪一塊多益分數？</span>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn btn-sm" id="btnForceUpdate">檢查更新</button>
             <button class="btn btn-sm" id="btnExportData">匯出學習進度</button>
             <button class="btn btn-sm" id="btnImportData">匯入備份</button>
             <button class="btn btn-sm btn-red" id="btnResetData">重置進度</button>
@@ -447,6 +448,21 @@
       });
     }
 
+    document.getElementById("btnForceUpdate").addEventListener("click", async () => {
+      try {
+        if ("caches" in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map((k) => caches.delete(k)));
+        }
+        if ("serviceWorker" in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map((r) => r.unregister()));
+        }
+      } catch (e) {
+        console.warn(e);
+      }
+      location.reload();
+    });
     document.getElementById("btnExportData").addEventListener("click", () => {
       const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
       const url = URL.createObjectURL(blob);
@@ -761,6 +777,7 @@
     coreTopic: "會計與帳務",
     dictation: false,
     autoSpeak: true,
+    mobileInputOpen: false, // 手機預設隱藏輸入方塊，點「開始拼寫」才開啟
     index: 0,
     typed: "",
     errFlag: false,
@@ -917,15 +934,20 @@
           <div id="typingZh" style="font-size:1.15rem;font-weight:800;margin-bottom:8px;"></div>
           <div class="muted" id="typingExample" style="display:none;font-size:0.88rem;max-width:600px;margin:0 auto 10px;"></div>
 
-          <div>
+          <div id="typingInputWrap" style="${isTouchDevice() && !typingState.mobileInputOpen ? "display:none;" : ""}">
             <input id="typingInput" class="typing-input-proxy" type="text" inputmode="latin" enterkeyhint="next"
               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
-              placeholder="點此拼寫英文單字（未點擊前不彈出鍵盤）" />
+              placeholder="在此拼寫英文單字..." />
           </div>
 
           <div style="display:flex;justify-content:center;gap:8px;margin-top:14px;flex-wrap:wrap;">
             <button class="btn btn-sm" id="btnTypePrev" type="button">← 上一字</button>
-            <button class="btn btn-sm" id="btnTypeHint" type="button">提示字母</button>
+            ${
+              isTouchDevice()
+                ? `<button class="btn btn-sm ${typingState.mobileInputOpen ? "btn-amber" : "btn-accent"}" id="btnToggleMobileTyping" type="button">${typingState.mobileInputOpen ? "收起拼寫框" : "開始拼寫"}</button>`
+                : `<button class="btn btn-sm" id="btnTypeHint" type="button">提示字母</button>`
+            }
+            ${isTouchDevice() && typingState.mobileInputOpen ? `<button class="btn btn-sm" id="btnTypeHint" type="button">提示字母</button>` : ""}
             <button class="btn btn-sm" id="btnTypeNext" type="button">下一字 →</button>
           </div>
         </div>
@@ -1021,9 +1043,28 @@
       });
 
       document.getElementById("btnHideKb").addEventListener("click", () => {
+        typingState.mobileInputOpen = false;
         input.blur();
+        document.body.classList.remove("keyboard-open");
+        renderTyping();
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
+
+      const toggleMobileBtn = document.getElementById("btnToggleMobileTyping");
+      if (toggleMobileBtn) {
+        toggleMobileBtn.addEventListener("click", () => {
+          typingState.mobileInputOpen = !typingState.mobileInputOpen;
+          if (!typingState.mobileInputOpen) {
+            input.blur();
+            document.body.classList.remove("keyboard-open");
+            renderTyping();
+          } else {
+            renderTyping();
+            const freshInput = document.getElementById("typingInput");
+            if (freshInput) freshInput.focus();
+          }
+        });
+      }
 
       document.getElementById("btnTypeSpeak").addEventListener("click", () => {
         const list = getTypingWords();
@@ -1058,20 +1099,23 @@
         if (typingState.autoSpeak) speak(list[typingState.index].word);
       });
 
-      document.getElementById("btnTypeHint").addEventListener("click", () => {
-        const list = getTypingWords();
-        const cur = list[typingState.index];
-        if (!cur) return;
-        if (typingState.typed.length < cur.word.length) {
-          typingState.typed += cur.word[typingState.typed.length];
-          typingState.errFlag = false;
-          if (typingState.typed.toLowerCase() === cur.word.toLowerCase()) {
-            finishTypedWord(list, cur);
-          } else {
-            updateTypingCard();
+      const hintBtn = document.getElementById("btnTypeHint");
+      if (hintBtn) {
+        hintBtn.addEventListener("click", () => {
+          const list = getTypingWords();
+          const cur = list[typingState.index];
+          if (!cur) return;
+          if (typingState.typed.length < cur.word.length) {
+            typingState.typed += cur.word[typingState.typed.length];
+            typingState.errFlag = false;
+            if (typingState.typed.toLowerCase() === cur.word.toLowerCase()) {
+              finishTypedWord(list, cur);
+            } else {
+              updateTypingCard();
+            }
           }
-        }
-      });
+        });
+      }
 
       input.addEventListener("input", () => {
         const list = getTypingWords();
@@ -1870,14 +1914,23 @@
     }
 
     let swRegistered = false;
+    let refreshing = false;
     const isHttp = location.protocol === "http:" || location.protocol === "https:";
     if (isHttp && "serviceWorker" in navigator) {
+      const hadController = !!navigator.serviceWorker.controller;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (hadController && !refreshing) {
+          refreshing = true;
+          location.reload();
+        }
+      });
       window.addEventListener("load", () => {
         navigator.serviceWorker
           .register("./sw.js")
-          .then(() => {
+          .then((reg) => {
             swRegistered = true;
             updateNetworkBadge(true);
+            reg.update().catch(() => {});
           })
           .catch((err) => console.warn("Service Worker 註冊失敗:", err));
       });
